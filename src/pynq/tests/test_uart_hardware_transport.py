@@ -9,7 +9,7 @@ from unittest.mock import patch
 import hashlib
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from uart_monitor.urx2 import URX2Transport,URX2RawTransport,KNOWN_URX2_SHAS
+from uart_monitor.urx2 import URX2Transport,URX2RawTransport,KNOWN_URX2_SHAS,BOOT_BASE_SHA,STARTUP2_PAIR
 from uart_monitor.hardware import ID
 
 
@@ -42,7 +42,7 @@ class HardwareTransportTests(unittest.TestCase):
     def make(self,mmio,raw_mode=False,clock_mhz=100):
         path=ROOT/'build/urx2_transport_tests'/uuid.uuid4().hex;path.mkdir(parents=True)
         bit=path/'uart_detector2.bit';bit.write_bytes(b'MOCK_ONLY_NOT_A_BITSTREAM')
-        shutil.copyfile(ROOT.parents[1]/'board/pynq/firmware/uart_detector2.hwh',bit.with_suffix('.hwh'))
+        shutil.copyfile(ROOT/'tests/fixtures/mock_urx2_hwh.xml',bit.with_suffix('.hwh'))
         module=types.SimpleNamespace(MMIO=lambda *a:mmio,Clocks=types.SimpleNamespace(fclk0_mhz=clock_mhz),
                                      PL=types.SimpleNamespace(bitfile_name=str(bit)),Bitstream=None)
         with patch.dict(sys.modules,{'pynq':module}):
@@ -111,7 +111,7 @@ class HardwareTransportTests(unittest.TestCase):
         folder=ROOT/'build/urx2_transport_tests'/uuid.uuid4().hex;folder.mkdir(parents=True)
         old=folder/'previous.bit';old.write_bytes(b'PREVIOUS_MOCK')
         new=folder/'updated.bit';new.write_bytes(b'UPDATED_MOCK')
-        shutil.copyfile(ROOT.parents[1]/'board/pynq/firmware/uart_detector2.hwh',new.with_suffix('.hwh'))
+        shutil.copyfile(ROOT/'tests/fixtures/mock_urx2_hwh.xml',new.with_suffix('.hwh'))
         downloaded=[]
         module=types.SimpleNamespace(MMIO=lambda *a:mmio,Clocks=types.SimpleNamespace(fclk0_mhz=100),
             PL=types.SimpleNamespace(bitfile_name=str(old)),
@@ -136,6 +136,34 @@ class HardwareTransportTests(unittest.TestCase):
         transport,downloaded=self.upgrade(FakeMMIO())
         self.assertEqual(len(downloaded),1)
         self.assertTrue(transport.provenance['reprogrammed'])
+
+    def boot_recovery(self,allow=True,program=True,bad_pair=False,unknown_base=False,bad_path=False):
+        folder=ROOT/'build/urx2_transport_tests'/uuid.uuid4().hex
+        old=folder/('other/base.bit' if bad_path else 'pynq/overlays/base/base.bit')
+        old.parent.mkdir(parents=True);old.write_bytes(b'BOOT_MOCK')
+        bit=folder/'uart_detector2.bit';bit.write_bytes(b'TARGET_MOCK')
+        shutil.copyfile(ROOT/'tests/fixtures/mock_urx2_hwh.xml',bit.with_suffix('.hwh'))
+        downloaded=[]
+        mmio=FakeMMIO()
+        module=types.SimpleNamespace(MMIO=lambda *a:mmio,Clocks=types.SimpleNamespace(fclk0_mhz=100),
+            PL=types.SimpleNamespace(bitfile_name=str(old)),
+            Bitstream=lambda path:types.SimpleNamespace(download=lambda:downloaded.append(path)))
+        def mock_digest(path):
+            path=Path(path)
+            if path==old:return 'UNKNOWN_BASE' if unknown_base else BOOT_BASE_SHA
+            if path==bit:return STARTUP2_PAIR[0]
+            if path==bit.with_suffix('.hwh'):return 'TAMPERED_HWH' if bad_pair else STARTUP2_PAIR[1]
+            return hashlib.sha256(path.read_bytes()).hexdigest()
+        with patch.dict(sys.modules,{'pynq':module}),patch('uart_monitor.urx2.digest',side_effect=mock_digest):
+            receiver=URX2Transport(bit,ROOT/'profiles/car_tlm1.json',program=program,allow_boot_recovery=allow)
+        self.assertEqual(len(downloaded),1)
+        return receiver
+
+    def test_explicit_recovery_accepts_only_verified_system_boot_and_firmware_pair(self):
+        receiver=self.boot_recovery()
+        self.assertTrue(receiver.provenance['verified_boot_recovery'])
+        for condition in ({'allow':False},{'program':False},{'bad_pair':True},{'unknown_base':True},{'bad_path':True}):
+            with self.subTest(condition=condition),self.assertRaises(RuntimeError):self.boot_recovery(**condition)
 
 
 if __name__=='__main__':unittest.main()

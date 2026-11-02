@@ -18,4 +18,10 @@ Thumbs.db
 /src/pynq/build/
 /src/ego1/build/
 /out/
+/src/car/Objects/
+/src/car/Listings/
+/src/car/build/
+*.uvguix.*
+*.uvoptx
+*.dbgconf
 

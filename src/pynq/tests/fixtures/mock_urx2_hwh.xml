@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SYSTEM><MEMRANGE INSTANCE="uart_rx_0" BASEVALUE="0x43C10000" HIGHVALUE="0x43C1FFFF"/></SYSTEM>

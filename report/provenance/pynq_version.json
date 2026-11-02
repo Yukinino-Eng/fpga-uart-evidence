@@ -1,24 +1,15 @@
 {
-  "version": "urx2_startup2_verified_20261101_v1",
-  "status": "VERIFIED_RUNTIME_SNAPSHOT_SEALED",
-  "snapshot_directory": "C:\\Users\\16501\\Documents\\FPGA_competition\\build\\urx2_verified_version_20261101_v1",
-  "manifest_sha256": "4e6f1bfbec3fdf09226d040e0fa4eb244f5c39c4573394b3bc39acc48b2c9914",
-  "runtime_files_identical_to_board": 26,
+  "runtime_version": "urx2_runtime_20261102",
+  "hardware_version": "urx2_startup2",
   "firmware_sha256": {
     "uart_detector2.bit": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
     "uart_detector2.hwh": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
     "uart_detector2.xsa": "4db2e2e66cf2c577a429cc6ba8ae57f8274b50837628150a923176cbe4495d33"
   },
-  "evidence": {
-    "build/uart_startup_20261101/completion.json": "6b0cf08759a720c4ed41139cc162cd9e87ea6848c8d8844f6904f142cf8e1150",
-    "build/uart_live_run_20261101/completion.json": "91b856668efa7fff190a80dd501140d733d65e6205a8b73fa115c881f11141cc",
-    "build/uart_text_acceptance_20261101_01/completion.json": "6754ca469918f924477d12e0fd349bb7a6a84bf4f6e09176d9cc4dc9b405486b",
-    "build/uart_failure_acceptance_20261101_01/completion.json": "09d7e79d56a5555494b561da02d20da799c67e62d86e06f94cbf03ed91f1f43c",
-    "build/uart_latest_binary_acceptance_20261101_01/completion.json": "e84fa85a3352c10e9b38d2ccc9ad753d8f8fdf2cdb90191826fb0eaed5e8cc51",
-    "build/uart_power_recovery_20261101_01/completion.json": "754f6360bb2ca89aa8ff4a057f79d889ece4b955b3e68bd37c5900019b1afda9",
-    "build/uart_power_recovery_20261101_01/export_verification.json": "68ea57df058effed0682dc732f813dbfd8aed868d3607361ef16c987b357ee4f"
-  },
-  "ready_for_demonstration_recording": true,
-  "scope": "Runtime snapshot with selected design sources and tests; full original project and implementation reports remain at their referenced workspace paths",
-  "cold_power_cycle": "PASS_ORDERLY_SHUTDOWN_AND_MANUAL_RECOVERY"
+  "protocol": "CAR-TLM1 and configurable UART",
+  "fixed_ip": "169.254.135.99/16",
+  "boot_recovery": "explicit_verified_base_to_startup2",
+  "fixed_ip_power_cycle_verified": true,
+  "cold_boot_recovery_verified": true,
+  "full_pre_post_file_snapshot_verified": false
 }

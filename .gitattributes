@@ -15,3 +15,6 @@ src/ego1/checks/** linguist-generated
 # Board definitions are third-party assets; XDC constraints use Tcl syntax.
 src/pynq/assets/** linguist-vendored
 *.xdc linguist-language=Tcl
+src/car/Library/** linguist-vendored
+src/car/Start/** linguist-vendored
+board/car/firmware/** linguist-generated

@@ -16,6 +16,9 @@ EXTRA=dict(event_level=0x100,event_overflows=0x104,event_received=0x10c,event_co
 URX1_SHA='9b218d76465c90d5c09f5a3d162d840da904f68e1caa100c93da1f4697efe2d6'
 KNOWN_URX2_SHAS={'5bd7937d8965397b87de2bcffde3d72adae594b6272cee7bb7a6862510189a70',
                  '24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f'}
+BOOT_BASE_SHA='c15081be382e21c397684632e274558ce557c27df1e958daa83c1386205a54a3'
+STARTUP2_PAIR=('24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f',
+               'f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf')
 
 
 def unpack_event(w):
@@ -27,7 +30,7 @@ def unpack_event(w):
 
 class URX2Transport(Transport):
     detection_source='fpga'
-    def __init__(self,bit,profile,program=False):
+    def __init__(self,bit,profile,program=False,allow_boot_recovery=False):
         self.compiled=compile_profile(profile) if self.detection_source=='fpga' else None
         self.profile=self.compiled['profile'] if self.compiled else load_profile(profile)
         from pynq import Bitstream,MMIO,Clocks,PL
@@ -36,6 +39,7 @@ class URX2Transport(Transport):
         old=digest(loaded) if loaded and loaded.is_file() else None
         matching=old==digest(self.bit)
         matching=matching and loaded.with_suffix('.hwh').is_file() and digest(loaded.with_suffix('.hwh'))==digest(self.bit.with_suffix('.hwh'))
+        boot_recovery=False
         if program:
             if matching or old in (URX1_SHA,CAR1_SHA) or old in KNOWN_URX2_SHAS:
                 previous=MMIO(BASE,65536)
@@ -49,9 +53,19 @@ class URX2Transport(Transport):
                 if previous.read(4)&4 or not(dma.read(4)&1 and dma.read(0x34)&1):raise RuntimeError('Save SBB event and halt DMA first')
                 if previous.read(0xfc)==0x35424253 and previous.read(4)&1 and not previous.read(4)&256:
                     raise RuntimeError('Stop SBB5 before replacing PL')
+            elif allow_boot_recovery and old==BOOT_BASE_SHA:
+                # Only the explicit Notebook load action opts into replacing the
+                # verified system boot image. Ordinary starts never program PL.
+                if not loaded.as_posix().endswith('/pynq/overlays/base/base.bit'):
+                    raise RuntimeError('Unexpected base overlay path; preserve the loaded application')
+                if (digest(self.bit),digest(self.bit.with_suffix('.hwh')))!=STARTUP2_PAIR:
+                    raise RuntimeError('Boot recovery requires the verified startup2 bit/HWH pair')
+                boot_recovery=True
             else:raise RuntimeError('Unknown loaded overlay; cannot prove it idle')
             Clocks.fclk0_mhz=100;Bitstream(str(self.bit)).download()
-        elif not matching:raise RuntimeError('URX2 is not loaded; explicit program is required after preserving previous application')
+        elif not matching:raise RuntimeError('URX2 is not loaded; explicit program is required after preserving previous application. '
+                                            'Stop other hardware applications, select the intended URX2 mode, then click Load firmware. '
+                                            'Loaded: {}; target: {}'.format(loaded,self.bit))
         if abs(float(Clocks.fclk0_mhz)-100.0)>.001:raise RuntimeError('URX2 requires nominal 100MHz FCLK0')
         self.mmio=MMIO(BASE,65536)
         if self.mmio.read(0xfc)!=ID or self.mmio.read(0x30)!=0x20000 or self.mmio.read(0x34)&0x1ff!=0x1ff:
@@ -64,6 +78,7 @@ class URX2Transport(Transport):
              overlay_id=ID,abi=0x20000,capabilities=self.mmio.read(0x34),detection_source=self.detection_source,
              timestamp_source='URX2_100MHz_relative_hardware_counter',receive_only=True,clock_hz=100000000,
              pin='PMODA1/Y18',reprogrammed=bool(program),
+             verified_boot_recovery=boot_recovery,
              uart_sync_policy='free_running_capture_gate' if self.background_sync else 'legacy_reset_on_capture',
              config_sha256=hashlib.sha256(json.dumps(self.compiled['words']).encode('ascii')).hexdigest() if self.compiled else None)
 

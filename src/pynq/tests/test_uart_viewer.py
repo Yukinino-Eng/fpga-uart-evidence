@@ -6,6 +6,7 @@ import io
 import json
 from pathlib import Path
 import sys
+import types
 import unittest
 import uuid
 import zlib
@@ -119,5 +120,32 @@ class ViewerTests(unittest.TestCase):
         self.assertIn('iframe',ui['state']['viewer']['panel'].value)
         ui['timer'].stop()
         ui['state']['viewer']['holder'].close();ui['state']['viewer']['panel'].close()
+
+    def test_successful_load_is_visible_after_a_failed_start(self):
+        from uart_monitor.ui import launch
+        failure='URX2 is not loaded; explicit program is required after preserving previous application'
+        previous=types.SimpleNamespace(thread=None,report=None,output=self.directory(),
+            snapshot=lambda:dict(state='ERROR',error=failure))
+        with patch('IPython.display.display'),contextlib.redirect_stdout(io.StringIO()):
+            ui=launch(ROOT)
+            ui['widgets']['detector'].value='fpga'
+            ui['state']['session']=previous
+            ui['refresh']()
+            self.assertIn(failure,ui['widgets']['notice'].value)
+            with patch.dict(sys.modules,{'pynq':types.SimpleNamespace()}), \
+                 patch('uart_monitor.urx2.URX2Transport') as transport:
+                ui['widgets']['program'].click()
+                ui['state']['loader'].join(timeout=3)
+                self.assertFalse(ui['state']['loader'].is_alive())
+                transport.assert_called_once()
+                self.assertTrue(transport.call_args.kwargs['program'])
+                self.assertTrue(transport.call_args.kwargs['allow_boot_recovery'])
+            ui['refresh']()
+            self.assertIn('已加载',ui['widgets']['status'].value)
+            self.assertIn('已加载',ui['widgets']['notice'].value)
+            self.assertNotIn(failure,ui['widgets']['notice'].value)
+            self.assertIs(ui['state']['session'],previous)
+        ui['timer'].stop()
+        for name in ('holder','panel','container'):ui['state']['viewer'][name].close()
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,11 @@
+; Keep the final 1KB page (0x0800FC00..0x0800FFFF) out of the application image.
+LR_IROM1 0x08000000 0x0000FC00 {
+  ER_IROM1 0x08000000 0x0000FC00 {
+    *.o (RESET, +First)
+    *(InRoot$$Sections)
+    .ANY (+RO)
+  }
+  RW_IRAM1 0x20000000 0x00005000 {
+    .ANY (+RW +ZI)
+  }
+}

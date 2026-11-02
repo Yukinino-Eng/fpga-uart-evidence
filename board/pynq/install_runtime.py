@@ -1,4 +1,4 @@
-"""Copy the sealed PYNQ runtime to a new directory. No hardware access."""
+"""Copy the current verified PYNQ runtime to a new directory. No hardware access."""
 import argparse
 import hashlib
 import json
@@ -24,7 +24,8 @@ def main():
     for folder in ['scripts/uart_monitor', 'profiles', 'notebooks']:
         selected.extend(p for p in (source / folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     for name in ['car_telemetry.py', 'car_tilt_demo.py', 'car_uart_capture.py', 'pynq_hardware_lease.py',
-                 'uart_monitor_cli.py', 'uart_behavior.py', 'uart_monitor_view.py']:
+                 'uart_monitor_cli.py', 'uart_behavior.py', 'uart_monitor_view.py',
+                 'pynq_fixed_ip.py', 'urx2_power_acceptance.py']:
         selected.append(source / 'scripts' / name)
     selected.extend(p for p in (ROOT / 'board/pynq/firmware').iterdir() if p.is_file())
     for p in selected:

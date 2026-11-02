@@ -26,7 +26,8 @@ def launch(root='.'):
     baud=widgets.Dropdown(options=[9600,19200,38400,57600,115200],value=115200,description='波特率')
     seconds=widgets.BoundedIntText(value=180,min=1,max=3600,description='记录秒数')
     detector=widgets.Dropdown(options=[('软件规则 / URX1基线','software'),('FPGA并行规则 / URX2','fpga'),('软件规则 / URX2通用','software-urx2')],
-                              value='software',description='检测执行',layout=widgets.Layout(width='330px'))
+                              value='fpga' if (root/'firmware/uart_detector2.bit').is_file() else 'software',
+                              description='检测执行',layout=widgets.Layout(width='330px'))
     evidence_mode=widgets.Dropdown(options=[('自动连续记录','continuous')],
                                   value='continuous',layout=widgets.Layout(display='none'))
     window_limit=widgets.BoundedIntText(value=100,min=1,max=1000,description='记录上限')
@@ -108,6 +109,7 @@ def launch(root='.'):
         return Transport,root/'firmware/uart_monitor_rx.bit'
     def load(_):
         if active():return
+        state['load_message']=''
         # The legacy SDK installs signal handlers during its first import.
         # Initialize it in the Notebook callback thread before the worker starts.
         try:
@@ -119,12 +121,15 @@ def launch(root='.'):
         def worker():
             try:
                 with HardwareLease():
-                    t=transport_class(bit,p,program=True)
+                    kwargs=dict(program=True)
+                    if detector.value in ('fpga','software-urx2'):kwargs['allow_boot_recovery']=True
+                    t=transport_class(bit,p,**kwargs)
                     state['load_message']='通用接收固件已加载；接收器保持停止。';t.close()
             except Exception as exc:state['load_message']='加载失败：'+str(exc)
         state['loader']=threading.Thread(target=worker,daemon=True);state['loader'].start()
     def begin(_):
         if active():return
+        state['load_message']=''
         try:
             __import__('pynq')
             previous=state['session']
@@ -168,9 +173,9 @@ def launch(root='.'):
                 brief['最新字段']={name:dict(value=value,unit=latest.get('units',{}).get(name,''),valid=latest['validity'][name])
                                  for name,value in latest['fields'].items()}
             status.value=json.dumps(brief,ensure_ascii=False,indent=2)
-        elif state['load_message']:status.value=state['load_message']
+        if state['load_message']:status.value=state['load_message']
         error=s.snapshot().get('error','') if s else ''
-        if error or state['load_message']:notice.value=html.escape(error or state['load_message'])
+        if error or state['load_message']:notice.value=html.escape(state['load_message'] or error)
         if running:notice.value='正在采集；页面约每500ms刷新，采集线程独立运行。连续模式为多个事件分别保存前后窗。'
         scan.disabled=running or loading;records.disabled=running or loading
         inspect.disabled=running or loading or not records.options

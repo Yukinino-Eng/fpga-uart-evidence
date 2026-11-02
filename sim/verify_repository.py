@@ -13,6 +13,8 @@ def files(root):
             continue
         if relative.parts[0] == 'out' or relative.parts[:3] in (('src', 'pynq', 'build'), ('src', 'ego1', 'build')):
             continue
+        if relative.parts[:3] in (('src','car','build'),('src','car','Objects'),('src','car','Listings')):
+            continue
         yield p
 
 def main():
@@ -26,7 +28,8 @@ def main():
         for part in Path(name).parts:
             if part in ('README.md', 'SKILL.md'):
                 continue
-            if not re.fullmatch(r'[a-z0-9_.-]+', part):
+            pattern=r'[A-Za-z0-9_.-]+' if Path(name).parts[:2]==('src','car') or Path(name).parts[:3]==('board','car','firmware') else r'[a-z0-9_.-]+'
+            if not re.fullmatch(pattern, part):
                 invalid_paths.append(name)
                 break
     if missing or extra or bad or invalid_paths:

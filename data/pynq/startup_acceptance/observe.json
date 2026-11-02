@@ -1,0 +1,17 @@
+{
+  "addresses": "2: eth0    inet 192.168.2.99/24 brd 192.168.2.255 scope global eth0:1\\       valid_lft forever preferred_lft forever\n2: eth0    inet 169.254.135.99/16 brd 169.254.255.255 scope global eth0:2\\       valid_lft forever preferred_lft forever\n",
+  "baseline_limited": true,
+  "boot_id": "39dceef6-ad09-4aee-8278-fee588bad0bc",
+  "config_sha256": "520c0099aa979099a52863f0a3f1c644edf2ef06290d8faa18d342ec7b0f4ee0",
+  "firmware_loaded_by_script": false,
+  "listener_ports": "State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              \nLISTEN     0      128          *:9090                     *:*                  \nLISTEN     0      100    127.0.0.1:33035                    *:*                  \nLISTEN     0      100    127.0.0.1:35211                    *:*                  \nLISTEN     0      50           *:139                      *:*                  \nLISTEN     0      100    127.0.0.1:54063                    *:*                  \nLISTEN     0      128          *:80                       *:*                  \nLISTEN     0      100    127.0.0.1:53553                    *:*                  \nLISTEN     0      100    127.0.0.1:53139                    *:*                  \nLISTEN     0      128          *:22                       *:*                  \nLISTEN     0      100    127.0.0.1:41757                    *:*                  \nLISTEN     0      50           *:445                      *:*                  \nLISTEN     0      50          :::139                     :::*                  \nLISTEN     0      128         :::80                      :::*                  \nLISTEN     0      128         :::22                      :::*                  \nLISTEN     0      50          :::445                     :::*                  \n",
+  "loaded_bit": "/opt/python3.6/lib/python3.6/site-packages/pynq/overlays/base/base.bit",
+  "loaded_bit_sha256": "c15081be382e21c397684632e274558ce557c27df1e958daa83c1386205a54a3",
+  "network_repaired_by_script": false,
+  "original_files_verified": null,
+  "phase": "observe",
+  "physical_capture_validated": false,
+  "previous_boot_id": "feb824f8-cac0-4c30-adaa-3f83658d6bee",
+  "root": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01",
+  "status": "PASS_AUTOMATIC_IP_AND_BOOT_IMAGE"
+}

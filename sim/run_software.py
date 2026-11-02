@@ -1,9 +1,12 @@
 """Run the existing UART software regression from any working directory."""
 from pathlib import Path
-import subprocess
-import sys
+import os
+import unittest
 
 project = Path(__file__).resolve().parents[1] / 'src/pynq'
-raise SystemExit(subprocess.call([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests',
-                                 '-p', 'test_uart_*.py', '-v'], cwd=str(project)))
+os.chdir(str(project))
+suite=unittest.TestSuite()
+for pattern in ['test_uart_*.py','test_urx2_power_acceptance.py']:
+    suite.addTests(unittest.defaultTestLoader.discover('tests',pattern=pattern))
+raise SystemExit(not unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful())
 

@@ -1,72 +1,77 @@
 # FPGA UART Evidence
 
-基于 PYNQ-Z2 的 UART 异常监测与取证系统：FPGA 接收并记录字节时间戳，最多八路配置化规则并行检测，PS 保存异常前后窗口，Notebook 展示实时状态并回放证据。
+基于 PYNQ-Z2 的 UART 异常监测与取证系统。FPGA 接收字节并附加硬件时间戳，最多八路规则并行检测，PS 保存事件前后窗口，Notebook 展示与回放数据。
 
-本仓库为 **2026-11-02 整理的最新工程快照**，接收端固定为 11 月 1 日已验收的 **URX2 startup2**，辅助发送端为 **EGo1 release2**。两块 FPGA 的源码、约束和构建入口独立。小车控制程序暂未上传；`car_telemetry.py`、`car_tlm1*.json` 与小车记录分别是 PYNQ 侧协议处理、配置和采集数据。
+工程包括 PYNQ URX2 startup2 接收端、EGo1 release2 合成测试发送端，以及实际验收使用的 STM32F103C8T6 小车工程。三套设备的工程与构建入口相互独立。PYNQ 只接收遥测，不控制小车。
 
-## 目录
+## 工程目录
 
-| 路径 | 内容 |
+| 目录 | 内容 |
 | --- | --- |
-| [src/pynq](src/pynq) | PYNQ 最新 RTL、PS 软件、协议配置、Notebook、板卡预设和回归用例 |
-| [src/ego1](src/ego1) | 独立 EGo1 合成 UART 发送器、约束、参考模型、测试向量及验证记录 |
-| [sim](sim) | 软件回归、原始数据独立回放、RTL 仿真说明 |
-| [build](build) | 可复现构建入口及 PYNQ startup2 综合/实现报告 |
-| [board](board) | 固件、运行目录部署脚本及上板说明 |
-| [data](data) | 最新阶段实测原始数据、硬件事件、取证窗口及验收收据 |
-| [skill](skill) | 九项项目协作与验证技能、来源索引及自检脚本 |
-| [report](report) | 最新设计报告、实测补充、交互回放、文件来源和本次发布检查 |
+| `src/pynq` | 接收端 RTL、PS 软件、协议配置、Notebook、软件测试 |
+| `src/ego1` | EGo1 合成 UART 发送器、约束、参考模型及测试向量 |
+| `src/car` | 小车 C 源码、Keil 工程及保留固定参考页的链接脚本 |
+| `board` | 三套设备的固件及部署、接线说明 |
+| `sim` | 软件回归、原始数据回放与小车协议核验入口 |
+| `data` | 实测原始数据、事件窗口与明确标注的合成输入 |
+| `build` | 两套 FPGA 的独立重建入口及实现报告 |
+| `report` | 设计报告、当前验证结论和文件版本清单 |
+| `skill` | 项目协作与验证技能 |
 
-文件路径均为 ASCII 英文；保留工具约定的 `README.md` / `SKILL.md`。中文说明只在文件正文中。工作缓存、旧版本工程、旧交付 ZIP、小车端源码和本地登录脚本未纳入。
+小车 Keil 工程保留原始大小写路径，其他工程路径采用 ASCII 英文。编译缓存、调试器个人设置和本地认证脚本不属于发布内容。
 
-## 电脑端复现
+## 电脑端检查
 
-Python 3.8+ 用于电脑端检查；最新板端运行代码保留 Python 3.6 语法。Windows 使用 PowerShell 7。软件回归中的 Notebook 控件检查可使用现有 `ipywidgets` 环境；离线回放不需要连接板卡。
-
-在仓库根目录执行：
+使用 Python 3.8+；Notebook 控件测试需要 ipywidgets、IPython 和 tornado。Windows 使用 PowerShell 7。
 
 ```sh
 python sim/verify_repository.py
 python sim/run_software.py
 python sim/verify_records.py
-python skill/pynq-uart-verify/scripts/self_test.py
+python sim/verify_car.py
+python src/car/tools/build.py --check-only
 ```
 
-`run_software.py` 原样保留现有 79 项 UART 用例，其中 3 项依赖未收录的早期实板记录，会明确跳过；另一个入口直接核验本仓库最新数据。数据与旧收据中保留的原工作站路径是来源信息，不是复现所需路径。
+软件回归包含 88 项用例；3 项依赖未随包提供的可选测量记录，会明确跳过。数据回放使用 `data/` 中的完整会话，合成输入不会标为真实小车采集。
 
-查看 [八路及持续时间实测回放](report/replays/binary_acceptance.html) 或 [断电恢复后实测回放](report/replays/power_recovery.html)：先下载文件，再用浏览器打开。也可从原始记录生成新的交互页面：
-
-```sh
-python src/pynq/scripts/uart_monitor_view.py --record data/pynq/power_recovery/download/recovered_parallel8_115200_01 --output replay.html
-```
-
-## 重建与上板
-
-使用 Vivado 2025.2，安装 Zynq-7000 和 Artix-7 器件支持。PYNQ 目标为 `xc7z020clg400-1`，EGo1 为 `xc7a35tcsg324-1`。
-
-```sh
-python build/rebuild.py --board pynq --vivado-bin /path/to/Vivado/bin --label my_build
-python build/rebuild.py --board ego1 --vivado-bin /path/to/Vivado/bin --label my_build
-```
-
-Windows 的 `--vivado-bin` 例如 `D:/AMD/2025.2/Vivado/bin`。每次使用新 label。构建入口不烧写板卡；具体步骤见 [build/README.md](build/README.md)。原有已验收固件保持封存，新构建结果须单独验证。
-
-PYNQ 部署为独立运行目录：
+## PYNQ 部署与运行
 
 ```sh
 python board/pynq/install_runtime.py --output /home/xilinx/jupyter_notebooks/uart_evidence
 ```
 
-再打开该目录的 `notebooks/uart_monitor.ipynb`。加载固件及基础镜像恢复方式见 [PYNQ 上板说明](board/pynq/README.md)；EGo1 的开关、接线和临时 JTAG 加载见 [EGo1 上板说明](board/ego1/README.md)。
+在板端终端对该运行目录配置一次持久 IP：
 
-## 已有验证和边界
+```sh
+sudo /opt/python3.6/bin/python3.6 /home/xilinx/jupyter_notebooks/uart_evidence/scripts/pynq_fixed_ip.py
+```
 
-- 最新 EGo1→PYNQ 二进制验收：9600/115200 八路并行、持续越限与单帧毛刺，四轮共 800 帧；恢复后再次验证 200 帧和 16 个完整设备故障窗口。
-- 真实小车运行与实时 Notebook 联合检查：300 秒、15028 帧。PYNQ 只接收遥测，小车仍由原控制系统运行。
-- 同一 URX2 固件接收两种协议；文本走 PS 软件规则，配置支持范围内的固定二进制走 FPGA 规则。
-- 已有过载归因、保存失败重试和一次正常关机后断电、人工恢复的证据。未验证采集中突然断电、自动续采或 SD 卡容错。
-- PYNQ 当前实现 100 MHz，报告 WNS=0.000 ns、WHS=0.044 ns；不能据此声称额外时序裕量或任意设备/满线速性能。
-- EGo1 完成包记录了 28 组既有仿真；长时仿真使用加速时钟参数，两组短测使用真实 100 MHz。该区别保留在原验证记录中。
+电脑与板卡使用相同网段，打开 `http://169.254.135.99:9090/tree`，进入实际运行目录的 `notebooks/uart_monitor.ipynb`。运行入口，选择协议和检测方式，依次点击“检查配置 → 加载通用接收固件 → 开始监测”。已核验系统镜像支持从默认 base.bit 显式恢复；未知镜像继续拒绝。详见 [PYNQ 部署](board/pynq/README.md)。
 
-详情见 [最新设计报告 PDF](report/uart_evidence_design_report.pdf)、[可编辑 Word](report/uart_evidence_design_report.docx)、[数据索引](data/README.md) 和 [本次发布检查](report/repository_validation.json)。本次仓库整理的离线检查与既有实板验收分别记录。
+## 重建工程
 
+FPGA 使用 Vivado 2025.2：
+
+```sh
+python build/rebuild.py --board pynq --vivado-bin D:/AMDDesignTools/2025.2/Vivado/bin --label my_build
+python build/rebuild.py --board ego1 --vivado-bin D:/AMDDesignTools/2025.2/Vivado/bin --label my_build
+```
+
+小车使用 Keil MDK、ARM Compiler 5：
+
+```sh
+python src/car/tools/build.py --keil D:/Keil_32/UV4/UV4.exe
+```
+
+构建入口不下载固件，不操作电机。PYNQ 新构建的 bit/HWH 必须作为配对固件独立验证。小车固定参考页为 `0x0800FC00..0x0800FFFF`，下载时保留该页。
+
+## 验证范围
+
+- 真实小车运行与 Notebook 联合记录为 300 秒、15028 帧。
+- EGo1 二进制输入覆盖 9600/115200、八路并行、持续越限和短毛刺。
+- 同一 URX2 固件支持二进制 FPGA 规则和文本软件规则。
+- 固定 IP 已完成一次实际断电自动恢复验证；默认启动镜像到 URX2 的显式加载分支已在实板通过。
+- 本轮启动验证没有完整断电前文件快照，不代表全部历史文件一致性或新的外部信号采集验收。
+- PYNQ 实现为 100 MHz，WNS=0.000 ns、WHS=0.044 ns；不声称额外时序裕量。
+
+具体结果见 [验证清单](report/repository_validation.json)、[数据索引](data/README.md) 和 [设计报告](report/uart_evidence_design_report.pdf)。
