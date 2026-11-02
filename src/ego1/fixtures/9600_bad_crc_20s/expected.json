@@ -1,0 +1,76 @@
+{
+  "case": "bad_crc",
+  "baud": 9600,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 10417,
+  "schedule_count": 200,
+  "raw_bytes": 9600,
+  "stream_sha256": "2fda6cdc2d5a061db89ea98ef6bc61266eba1020c675cb54cfe0c0f18532ff80",
+  "parser": {
+    "bytes_seen": 9600,
+    "frames": 199,
+    "discarded_bytes": 48,
+    "interframe_discarded_bytes": 48,
+    "header_errors": 0,
+    "crc_errors": 1,
+    "semantic_errors": 0,
+    "sequence_missing": 1,
+    "duplicates": 0,
+    "restart_or_out_of_order": 0,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": false,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {},
+  "hardware_covered_event_counts": {
+    "protocol:crc_errors": 1,
+    "protocol:sequence_missing": 1
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "protocol:crc_errors",
+      "category": "protocol",
+      "trigger_ticks": 604995045,
+      "evidence": {
+        "kind": "crc_errors",
+        "ticks": 604995045,
+        "raw_offset": 2880
+      }
+    },
+    {
+      "event_id": 2,
+      "rule_id": "protocol:interframe_noise",
+      "category": "protocol",
+      "trigger_ticks": 604995045,
+      "evidence": {
+        "kind": "interframe_noise",
+        "raw_offset": 2880,
+        "count": 48,
+        "ticks": 604995045
+      }
+    },
+    {
+      "event_id": 3,
+      "rule_id": "protocol:sequence_missing",
+      "category": "protocol",
+      "trigger_ticks": 614995045,
+      "evidence": {
+        "kind": "sequence_missing",
+        "ticks": 614995045,
+        "raw_offset": 2928,
+        "count": 1
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

@@ -1,0 +1,10 @@
+[
+  {"id":"parallel8_9600","record":"build/uart_latest_binary_acceptance_20261101_01/download/parallel8_9600_01","expect":"parallel8.json"},
+  {"id":"parallel8_115200","record":"build/uart_latest_binary_acceptance_20261101_01/download/parallel8_115200_02","expect":"parallel8.json"},
+  {"id":"persistent","record":"build/uart_latest_binary_acceptance_20261101_01/download/persistent_115200_01","expect":"persistent.json"},
+  {"id":"glitch","record":"build/uart_latest_binary_acceptance_20261101_01/download/glitch_115200_01","expect":"glitch.json"},
+  {"id":"overload","record":"build/uart_failure_acceptance_20261101_01/download_before/urx2_physical_overload_20261101_01","expect":"overload.json"},
+  {"id":"power_recovered","record":"build/uart_power_recovery_20261101_01/download/recovered_parallel8_115200_01","expect":"parallel8.json"},
+  {"id":"storage_recovered","record":"build/uart_failure_acceptance_20261101_01/download_after/urx2_storage_failure_20261101_01","expect":"storage-recovered.json"},
+  {"id":"unavailable_checks_offline","record":"build/uart_text_acceptance_20261101_01/unknown_offline_record","expect":"unavailable-checks.json"}
+]

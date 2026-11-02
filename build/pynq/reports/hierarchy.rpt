@@ -1,0 +1,60 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 16:42:13 2026
+| Host         : destiny running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 8 -file C:/Users/16501/Documents/FPGA_competition/build/vivado/18_uart_detector2_startup2/reports/hierarchy.rpt
+| Design       : system_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Physopt postRoute
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------+---------------------------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|                     Instance                     |                                            Module                                           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------+---------------------------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| system_wrapper                                   |                                                                                       (top) |      15971 |      15910 |       0 |   61 | 13887 |     22 |      1 |          0 |
+|   (system_wrapper)                               |                                                                                       (top) |          0 |          0 |       0 |    0 |     0 |      0 |      0 |          0 |
+|   system_i                                       |                                                                                      system |      15971 |      15910 |       0 |   61 | 13887 |     22 |      1 |          0 |
+|     uart_rx_0                                    |                                                                          system_uart_rx_0_0 |      15559 |      15559 |       0 |    0 | 13366 |     22 |      1 |          0 |
+|       inst                                       |                                                                  system_uart_rx_0_0_urx2_bd |      15559 |      15559 |       0 |    0 | 13366 |     22 |      1 |          0 |
+|         u_axi                                    |                                                                 system_uart_rx_0_0_urx2_axi |      15559 |      15559 |       0 |    0 | 13366 |     22 |      1 |          0 |
+|           (u_axi)                                |                                                                 system_uart_rx_0_0_urx2_axi |       4756 |       4756 |       0 |    0 |  9727 |     19 |      0 |          0 |
+|           detector                               |                                                            system_uart_rx_0_0_urx2_detector |      10717 |      10717 |       0 |    0 |  3597 |      3 |      1 |          0 |
+|             (detector)                           |                                                            system_uart_rx_0_0_urx2_detector |       8751 |       8751 |       0 |    0 |  3061 |      3 |      1 |          0 |
+|             rules[0].lane                        |                                                           system_uart_rx_0_0_urx2_rule_lane |        270 |        270 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[1].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_0 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[2].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_1 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[3].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_2 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[4].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_3 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[5].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_4 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[6].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_5 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|             rules[7].lane                        |                                                         system_uart_rx_0_0_urx2_rule_lane_6 |        243 |        243 |       0 |    0 |    67 |      0 |      0 |          0 |
+|           u_rx                                   |                                                          system_uart_rx_0_0_uart_monitor_rx |        101 |        101 |       0 |    0 |    42 |      0 |      0 |          0 |
+|     control                                      |                                                                            system_control_0 |        394 |        334 |       0 |   60 |   484 |      0 |      0 |          0 |
+|       s00_couplers                               |                                                                     s00_couplers_imp_5VD14K |        394 |        334 |       0 |   60 |   484 |      0 |      0 |          0 |
+|         auto_pc                                  |                                                                system_control_imp_auto_pc_0 |        394 |        334 |       0 |   60 |   484 |      0 |      0 |          0 |
+|           inst                                   |          system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_axi_protocol_converter |        394 |        334 |       0 |   60 |   484 |      0 |      0 |          0 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |                             system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s |        394 |        334 |       0 |   60 |   484 |      0 |      0 |          0 |
+|               WR.aw_channel_0                    |                  system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s_aw_channel |         77 |         77 |       0 |    0 |    86 |      0 |      0 |          0 |
+|                 cmd_translator_0                 |              system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s_cmd_translator |         33 |         33 |       0 |    0 |    68 |      0 |      0 |          0 |
+|               RD.ar_channel_0                    |                  system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s_ar_channel |         68 |         68 |       0 |    0 |    82 |      0 |      0 |          0 |
+|                 cmd_translator_0                 |            system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s_cmd_translator_1 |         32 |         32 |       0 |    0 |    68 |      0 |      0 |          0 |
+|               RD.r_channel_0                     |                   system_control_imp_auto_pc_0_axi_protocol_converter_v2_1_37_b2s_r_channel |         60 |         14 |       0 |   46 |    24 |      0 |      0 |          0 |
+|               SI_REG                             |                  system_control_imp_auto_pc_0_axi_register_slice_v2_1_36_axi_register_slice |        158 |        158 |       0 |    0 |   274 |      0 |      0 |          0 |
+|                 ar.ar_pipe                       |                 system_control_imp_auto_pc_0_axi_register_slice_v2_1_36_axic_register_slice |         58 |         58 |       0 |    0 |    74 |      0 |      0 |          0 |
+|                 aw.aw_pipe                       |               system_control_imp_auto_pc_0_axi_register_slice_v2_1_36_axic_register_slice_0 |         63 |         63 |       0 |    0 |    76 |      0 |      0 |          0 |
+|                 r.r_pipe                         | system_control_imp_auto_pc_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2 |         27 |         27 |       0 |    0 |    94 |      0 |      0 |          0 |
++--------------------------------------------------+---------------------------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

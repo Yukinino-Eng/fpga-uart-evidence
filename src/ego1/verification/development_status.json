@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-31",
+  "board": {
+    "identified": "xc7a35t",
+    "volatile_programmed": true,
+    "flash_written": false,
+    "uart9600": "PASS_EXACT_BOARD_BYTES",
+    "uart115200": "PASS_EXACT_BOARD_BYTES",
+    "pynq_connected": false,
+    "current_state": "Completed, idle high; SW0 ON, SW1..4 OFF; UART handles closed",
+    "normal_test_frames_each": 200,
+    "normal_test_seconds_each": 20
+  },
+  "part": "xc7a35tcsg324-1",
+  "protocol": "URX2 sender / CAR-TLM1 compatible binary 48 bytes",
+  "vivado": "2025.2",
+  "simulation": {
+    "main": 25,
+    "extended": 3,
+    "total": 28,
+    "passed": 28,
+    "source": "independent UART TX line sampling",
+    "full_duration_clock_hz": 250000,
+    "production_clock_hz": 100000000,
+    "full_clock_baud_checks": [
+      9600,
+      115200
+    ]
+  },
+  "implementation": {
+    "clock_mhz": 100,
+    "wns_ns": 0.48,
+    "whs_ns": 0.122,
+    "lut": 779,
+    "ff": 700,
+    "bram": 0,
+    "dsp": 1,
+    "drc_errors": 0,
+    "drc_warnings": [
+      "DPIP-1",
+      "DPOP-2"
+    ],
+    "cdc_info": {
+      "synchronized_inputs": 6,
+      "synchronized_reset": 1
+    },
+    "unconstrained_internal_endpoints": 0,
+    "clean_rebuild": "PASS"
+  },
+  "firmware": {
+    "path": "firmware/ego1_urx2_release2.bit",
+    "sha256": "9db7a76b41c4092b5c367cfe834e5a4237824deddf5b22aaacfab539a38f2674"
+  },
+  "boundaries": [
+    "Full-duration regression uses accelerated clock parameter",
+    "PYNQ URX2 deployment and event-window acceptance not performed",
+    "Production-clock 60/180-second endurance remains unmeasured"
+  ],
+  "status": "COMPLETE_SENDER_DEVELOPMENT_WITH_USB_SMOKE"
+}

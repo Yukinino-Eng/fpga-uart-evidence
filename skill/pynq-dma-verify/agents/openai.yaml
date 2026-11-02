@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ DMA 采集完整性核验"
+  short_description: "检查 DMA 缓存与帧完整性，区分传输缺损、窗口不足和保存失败"
+  default_prompt: "请使用 $pynq-dma-verify 核验 DMA 数据流的缓冲区、帧与保存状态，列出独立计数和证据。"

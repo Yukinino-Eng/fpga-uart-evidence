@@ -1,0 +1,134 @@
+{
+  "status": "PASS_OFFLINE_STANDARDIZED_SKILLS",
+  "date": "2026-11-01",
+  "python": "3.13.15",
+  "operating_system": "Windows",
+  "skill_format": [
+    {
+      "name": "fpga-reference-verify",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    },
+    {
+      "name": "fpga-release-verify",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    },
+    {
+      "name": "pynq-dma-verify",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    },
+    {
+      "name": "pynq-overlay-verify",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    },
+    {
+      "name": "pynq-runtime-debug",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    },
+    {
+      "name": "pynq-uart-verify",
+      "status": "PASS",
+      "output": "Skill is valid!"
+    }
+  ],
+  "local_markdown_links_checked": 24,
+  "python36_syntax_checked": true,
+  "python36_runtime_tested": false,
+  "python_scripts": 4,
+  "helper_selftest": {
+    "status": "PASS_SKILL_HELPERS",
+    "checks": 15,
+    "results": [
+      "unchanged_file_passes",
+      "changed_file_rejected",
+      "extra_file_rejected",
+      "missing_file_rejected",
+      "parent_path_rejected",
+      "absolute_path_rejected",
+      "output_inside_source_rejected",
+      "existing_output_rejected",
+      "valid_time_index_passes",
+      "short_time_index_rejected",
+      "backwards_time_rejected",
+      "expected_failed_capture_preserved",
+      "capture_failure_cannot_claim_device_pass",
+      "unavailable_checks_preserved",
+      "unavailable_checksum_cannot_claim_available"
+    ],
+    "hardware_accessed": false,
+    "network_accessed": false,
+    "note": "Generated temporary inputs; not a new physical acquisition"
+  },
+  "historical_record_audit": {
+    "status": "PASS_HISTORICAL_RECORD_AUDIT",
+    "cases": [
+      {
+        "id": "parallel8_9600",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "FAIL"
+      },
+      {
+        "id": "parallel8_115200",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "FAIL"
+      },
+      {
+        "id": "persistent",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "FAIL"
+      },
+      {
+        "id": "glitch",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "PASS"
+      },
+      {
+        "id": "overload",
+        "expectations_matched": true,
+        "frames": 172,
+        "device_health": "UNKNOWN"
+      },
+      {
+        "id": "power_recovered",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "FAIL"
+      },
+      {
+        "id": "storage_recovered",
+        "expectations_matched": true,
+        "frames": 200,
+        "device_health": "FAIL"
+      },
+      {
+        "id": "unavailable_checks_offline",
+        "expectations_matched": true,
+        "frames": 20,
+        "device_health": "PASS"
+      }
+    ],
+    "hardware_accessed": false,
+    "network_accessed": false,
+    "note": "New offline validation of existing physical records; no new board test"
+  },
+  "original_sources_verified": 22,
+  "historical_physical_records": 7,
+  "constructed_offline_records": 1,
+  "hardware_accessed": false,
+  "network_accessed": false,
+  "scope": "Six normalized skill entrypoints; executable checks cover portable helpers and the URX adapter, not newly executed SBB/DMA or hardware workflows",
+  "limitations": [
+    "No new board test",
+    "No new CAD rebuild",
+    "No independent external-team or second-board validation",
+    "Collaboration summaries do not replace complete chat transcripts"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA 优化方向与实现取舍"
+  short_description: "按真实瓶颈选择软硬件优化，比较收益、资源、验证成本和回退条件"
+  default_prompt: "请使用 $fpga-optimization-plan 判断当前系统最值得优化的环节，给出证据、最小实验、资源代价和停止条件。"

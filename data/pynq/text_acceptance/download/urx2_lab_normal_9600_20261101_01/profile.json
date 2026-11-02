@@ -1,0 +1,109 @@
+{
+  "checksum": {
+    "delimiter": "*",
+    "kind": "xor8",
+    "start": 1
+  },
+  "description": "PC-generated experimental source; not another real device",
+  "display": {
+    "default_field": "temperature_mdeg",
+    "fields": {
+      "sequence": "\u5e27\u5e8f\u53f7",
+      "status": "\u72b6\u6001\u4f4d",
+      "temperature_mdeg": "\u6e29\u5ea6",
+      "uptime_ms": "\u8bbe\u5907\u8fd0\u884c\u65f6\u95f4",
+      "voltage_mv": "\u7535\u6e90\u7535\u538b"
+    },
+    "name": "\u5b9e\u9a8c\u6570\u636e\u6e90 \u00b7 LAB ASCII"
+  },
+  "evidence": {
+    "max_pending": 8,
+    "max_windows": 100,
+    "mode": "continuous",
+    "post_seconds": 5,
+    "pre_seconds": 5
+  },
+  "fields": [
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "column": 1,
+      "name": "sequence",
+      "scale": 1,
+      "type": "u32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "column": 2,
+      "name": "uptime_ms",
+      "scale": 1,
+      "type": "u32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "column": 3,
+      "name": "temperature_mdeg",
+      "scale": 0.001,
+      "type": "i32",
+      "unit": "degC"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "column": 4,
+      "name": "voltage_mv",
+      "scale": 0.001,
+      "type": "u32",
+      "unit": "V"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "column": 5,
+      "name": "status",
+      "scale": 1,
+      "type": "u16"
+    }
+  ],
+  "framing": {
+    "kind": "text",
+    "max_length": 512,
+    "prefix": "@LAB,",
+    "separator": ","
+  },
+  "id": "lab_ascii_v1",
+  "profile_version": 1,
+  "rules": [
+    {
+      "duration_ms": 100,
+      "field": "temperature_mdeg",
+      "id": "temperature_limit",
+      "kind": "range",
+      "max": 60,
+      "min": 0
+    },
+    {
+      "duration_ms": 0,
+      "equals": 1,
+      "field": "status",
+      "id": "status_fault",
+      "kind": "bits",
+      "mask": 1
+    }
+  ],
+  "sequence": {
+    "bits": 32,
+    "field": "sequence",
+    "time_bits": 32,
+    "time_field": "uptime_ms"
+  },
+  "timing": {
+    "valid_frame_timeout_ms": 250
+  },
+  "transport": {
+    "baud": 9600,
+    "format": "8N1"
+  }
+}

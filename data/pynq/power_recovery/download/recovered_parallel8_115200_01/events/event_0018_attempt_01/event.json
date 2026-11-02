@@ -1,0 +1,35 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 25603995217,
+  "capture_start_ticks": 14432344479,
+  "covered_end_ticks": 25540605337,
+  "covered_start_ticks": 24540605337,
+  "desired_end_ticks": 25540605337,
+  "desired_start_ticks": 24540605337,
+  "files": {
+    "frames.jsonl": "7409abc7baf3c16b8bdde1946d1b606123aefc9fdc66af03ed7213d58dfa75ff",
+    "raw.bin": "9f6eaf64ac980771b5bf5fcdca302307930d891d4790b918f0aea25385363715",
+    "timestamps.bin": "ca65b034ea648f0cfcd35853405b2d2b7e8fbf3aed985ed16407e82e840a601f"
+  },
+  "frame_count": 200,
+  "frames_end": 248785,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 9600,
+  "raw_entries": 9600,
+  "raw_start": 7296,
+  "trigger": {
+    "category": "protocol",
+    "event_id": 18,
+    "evidence": {
+      "deadline_ticks": 25040605337,
+      "last_valid_ticks": 25015605337
+    },
+    "hardware_batch_id": 4,
+    "rule_id": "valid_frame_timeout",
+    "source": "fpga",
+    "trigger_ticks": 25040605337
+  }
+}

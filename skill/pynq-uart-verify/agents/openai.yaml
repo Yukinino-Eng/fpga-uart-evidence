@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ UART 采集与取证核验"
+  short_description: "核验串口采集、设备规则与连续取证，用原始回放区分异常来源"
+  default_prompt: "请使用 $pynq-uart-verify 核验串口监测记录，分别说明采集、协议、设备和保存状态及其依据。"

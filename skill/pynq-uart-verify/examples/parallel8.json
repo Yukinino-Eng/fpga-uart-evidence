@@ -1,0 +1,17 @@
+{
+  "observed": {
+    "assessment": {"capture_integrity": "PASS", "protocol_integrity": "PASS", "device_health": "FAIL"},
+    "raw_bytes": 9600,
+    "frames": 200,
+    "events": 18,
+    "device_events": 16,
+    "same_tick_device_counts": [8, 8],
+    "saved_windows": 18,
+    "complete_device_windows": 16,
+    "failed_windows": 0,
+    "dropped_windows": 0,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "replay": {"status": "VERIFIED", "frames": 200, "logical_events_match": true, "hardware_accessed": false}
+}

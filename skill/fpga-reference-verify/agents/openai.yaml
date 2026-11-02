@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA 参考模型与分阶段回归"
+  short_description: "用独立参考核对输出，分开记录仿真、构建、实板和离线回放"
+  default_prompt: "请使用 $fpga-reference-verify 为本次改动选择独立参考与必要回归，分别给出各阶段结果。"

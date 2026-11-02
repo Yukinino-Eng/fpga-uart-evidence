@@ -1,0 +1,2 @@
+{"category": "protocol", "event_id": 1, "evidence": {"deadline_ticks": 516781126047, "last_valid_ticks": 516756126047}, "rule_id": "valid_frame_timeout", "trigger_ticks": 516781126047}
+{"category": "device", "event_id": 2, "evidence": {"field": "status", "raw_end": 1808, "raw_start": 1778, "raw_value": 1, "value": 1}, "rule_id": "status_fault", "trigger_ticks": 526211912229}

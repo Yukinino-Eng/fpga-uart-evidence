@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-17",
+  "note": "SHA-256 identifies fetched bytes; upstream master URLs may change.",
+  "files": [
+    {
+      "path": "board.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/board.xml",
+      "bytes": 54479,
+      "sha256": "a565dcb39737d551cbbbb73c0053b973c40bb3dce2274943370d3032c0fea9ae"
+    },
+    {
+      "path": "board_files/pynq-z2/A.0/board.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/board.xml",
+      "bytes": 54479,
+      "sha256": "a565dcb39737d551cbbbb73c0053b973c40bb3dce2274943370d3032c0fea9ae"
+    },
+    {
+      "path": "board_files/pynq-z2/A.0/part0_pins.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/part0_pins.xml",
+      "bytes": 9007,
+      "sha256": "3c809473938e135a925b563b5371c8687ee05c4089376e7318c0c56524cc8a0f"
+    },
+    {
+      "path": "board_files/pynq-z2/A.0/preset.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/preset.xml",
+      "bytes": 74492,
+      "sha256": "18528f84aea4da503cdb3104f7706fabfb3b6ad09b78b25199cc316afa4c8cfe"
+    },
+    {
+      "path": "board_files/pynq-z2/A.0/pynq_z2.jpg",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/pynq_z2.jpg",
+      "bytes": 1235727,
+      "sha256": "8d1d94615b69fa944541df962637cdc603fd099125803dba0dd1a504bb6afd15"
+    },
+    {
+      "path": "master_xdc/PYNQ-Z2 v1.0.tcl",
+      "source": "https://dpoauwgwqsy2x.cloudfront.net/Download/pynq-z2_v1.0.xdc.zip",
+      "bytes": 39601,
+      "sha256": "1ebb6c4b332cb7f5f925488e6bce6aa2ce683469d0af7a4a34d6278cbbc6b6f2"
+    },
+    {
+      "path": "master_xdc/PYNQ-Z2 v1.0.xdc",
+      "source": "https://dpoauwgwqsy2x.cloudfront.net/Download/pynq-z2_v1.0.xdc.zip",
+      "bytes": 16697,
+      "sha256": "07441e999bac956c77e78091c782cade278efc5a78affc51e5b12b4800b1fe73"
+    },
+    {
+      "path": "part0_pins.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/part0_pins.xml",
+      "bytes": 9007,
+      "sha256": "3c809473938e135a925b563b5371c8687ee05c4089376e7318c0c56524cc8a0f"
+    },
+    {
+      "path": "preset.xml",
+      "source": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/master/boards/TUL/pynq-z2/A.0/preset.xml",
+      "bytes": 74492,
+      "sha256": "18528f84aea4da503cdb3104f7706fabfb3b6ad09b78b25199cc316afa4c8cfe"
+    },
+    {
+      "path": "pynq-z2_v1.0.xdc.zip",
+      "source": "https://dpoauwgwqsy2x.cloudfront.net/Download/pynq-z2_v1.0.xdc.zip",
+      "bytes": 7733,
+      "sha256": "60e6d72e3fd9d8771da60567e038be2e69baf9a95290b627a4955aa89c3048f3"
+    },
+    {
+      "path": "PYNQ_Z2_User_Manual_v1.1.pdf",
+      "source": "https://dpoauwgwqsy2x.cloudfront.net/Download/PYNQ_Z2_User_Manual_v1.1.pdf",
+      "bytes": 1380146,
+      "sha256": "af38e175e8197b4e28edcd14c43a136ef85cd860ef71143d3edd73853e62a62c"
+    },
+    {
+      "path": "TUL_PYNQ_Schematic_R12.pdf",
+      "source": "https://pynq.tue.nl/doc/TUL_PYNQ_Schematic_R12.pdf",
+      "bytes": 285903,
+      "sha256": "2a5c8bd73291901b80bed0d5b178def40e0ac7ca6ca0ea56f7acad1dd4f3c7c9"
+    }
+  ]
+}

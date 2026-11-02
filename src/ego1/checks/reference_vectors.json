@@ -1,0 +1,277 @@
+{
+  "status": "PASS_REFERENCE_BYTES_AND_INDEPENDENT_DECODER_RULE_ORACLE",
+  "fixtures": 22,
+  "cases": [
+    {
+      "case": "normal",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "61c2faa850da21a7bf3e7c2e727380ec81e0a85cd723e1d506c68175e3f6f2ae",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "bad_crc",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "2fda6cdc2d5a061db89ea98ef6bc61266eba1020c675cb54cfe0c0f18532ff80",
+      "hardware_covered_event_counts": {
+        "protocol:crc_errors": 1,
+        "protocol:sequence_missing": 1
+      }
+    },
+    {
+      "case": "skip",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "473689da1a34e7d040f3661bf304b231d0a62c9b6fc96baa214520d12f63169c",
+      "hardware_covered_event_counts": {
+        "protocol:sequence_missing": 1
+      }
+    },
+    {
+      "case": "duplicate",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "d544e0be16a5a2086783cc498761abb19247301414614c40e16a2c3e4f5fe4cc",
+      "hardware_covered_event_counts": {
+        "protocol:duplicates": 1
+      }
+    },
+    {
+      "case": "gap",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9312,
+      "schedule_count": 194,
+      "stream_sha256": "039517e0354d176bdf9dd74b55accba4e23cf2a561fd99dd9c27974056b05e37",
+      "hardware_covered_event_counts": {
+        "protocol:sequence_missing": 1,
+        "valid_frame_timeout": 1
+      }
+    },
+    {
+      "case": "persistent",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "915f464cf9fc48a6356fe6b34667f3e3d6abaf412f45a4f8ab67fbfc4c7b8851",
+      "hardware_covered_event_counts": {
+        "pitch_limit": 1
+      }
+    },
+    {
+      "case": "glitch",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "a35a25fc901e0682d5096c04a8b0e7836b4a35074147ccec8a56378db3791309",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "parallel8",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "103282f4441f277257ec4810636b35a5da73ab8c79ea28b2696bc9f5ce7e7a2c",
+      "hardware_covered_event_counts": {
+        "parallel_0": 2,
+        "parallel_1": 2,
+        "parallel_2": 2,
+        "parallel_3": 2,
+        "parallel_4": 2,
+        "parallel_5": 2,
+        "parallel_6": 2,
+        "parallel_7": 2
+      }
+    },
+    {
+      "case": "normal",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "61c2faa850da21a7bf3e7c2e727380ec81e0a85cd723e1d506c68175e3f6f2ae",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "bad_crc",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "2fda6cdc2d5a061db89ea98ef6bc61266eba1020c675cb54cfe0c0f18532ff80",
+      "hardware_covered_event_counts": {
+        "protocol:crc_errors": 1,
+        "protocol:sequence_missing": 1
+      }
+    },
+    {
+      "case": "skip",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "473689da1a34e7d040f3661bf304b231d0a62c9b6fc96baa214520d12f63169c",
+      "hardware_covered_event_counts": {
+        "protocol:sequence_missing": 1
+      }
+    },
+    {
+      "case": "duplicate",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "d544e0be16a5a2086783cc498761abb19247301414614c40e16a2c3e4f5fe4cc",
+      "hardware_covered_event_counts": {
+        "protocol:duplicates": 1
+      }
+    },
+    {
+      "case": "gap",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9312,
+      "schedule_count": 194,
+      "stream_sha256": "039517e0354d176bdf9dd74b55accba4e23cf2a561fd99dd9c27974056b05e37",
+      "hardware_covered_event_counts": {
+        "protocol:sequence_missing": 1,
+        "valid_frame_timeout": 1
+      }
+    },
+    {
+      "case": "persistent",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "915f464cf9fc48a6356fe6b34667f3e3d6abaf412f45a4f8ab67fbfc4c7b8851",
+      "hardware_covered_event_counts": {
+        "pitch_limit": 1
+      }
+    },
+    {
+      "case": "glitch",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "a35a25fc901e0682d5096c04a8b0e7836b4a35074147ccec8a56378db3791309",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "parallel8",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "103282f4441f277257ec4810636b35a5da73ab8c79ea28b2696bc9f5ce7e7a2c",
+      "hardware_covered_event_counts": {
+        "parallel_0": 2,
+        "parallel_1": 2,
+        "parallel_2": 2,
+        "parallel_3": 2,
+        "parallel_4": 2,
+        "parallel_5": 2,
+        "parallel_6": 2,
+        "parallel_7": 2
+      }
+    },
+    {
+      "case": "normal",
+      "baud": 9600,
+      "fps": 10,
+      "seconds": 60,
+      "raw_bytes": 28800,
+      "schedule_count": 600,
+      "stream_sha256": "bf1ef1aca270b0165f470ffc548a6989591ddc1137ea77dbc0dcb2b3930fed7e",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "normal",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 60,
+      "raw_bytes": 28800,
+      "schedule_count": 600,
+      "stream_sha256": "bf1ef1aca270b0165f470ffc548a6989591ddc1137ea77dbc0dcb2b3930fed7e",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "normal",
+      "baud": 115200,
+      "fps": 50,
+      "seconds": 60,
+      "raw_bytes": 144000,
+      "schedule_count": 3000,
+      "stream_sha256": "9d54570d6e0c3378cdebbc29d0d70c718c71031b21d3e18687f3881b5e4e2969",
+      "hardware_covered_event_counts": {}
+    },
+    {
+      "case": "status",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "a083e7646007b9bd5ce11aa34a5d8a3c04480e171e8fce665d7a97c38611046c",
+      "hardware_covered_event_counts": {
+        "device_fault": 1
+      }
+    },
+    {
+      "case": "invalid",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "b357214183e0ace764ff8524eddfdb420eeb9c97f5fa0ca98d449ca3bffceef1",
+      "hardware_covered_event_counts": {
+        "imu_invalid": 1
+      }
+    },
+    {
+      "case": "restart",
+      "baud": 115200,
+      "fps": 10,
+      "seconds": 20,
+      "raw_bytes": 9600,
+      "schedule_count": 200,
+      "stream_sha256": "b774687b841abb487c0d78cea0d0d4c0d4badfdd512b896fd07b3e8eb8070f2d",
+      "hardware_covered_event_counts": {
+        "protocol:restart_or_out_of_order": 1
+      }
+    }
+  ],
+  "hardware_accessed": false,
+  "new_sender_rtl_implemented": false,
+  "note": "Reference inputs and software checks only; no new FPGA RTL simulation or board test performed"
+}

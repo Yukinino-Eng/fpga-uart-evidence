@@ -1,0 +1,5 @@
+{"category": "protocol", "event_id": 1, "evidence": {"deadline_ticks": 502973639478, "last_valid_ticks": 502948639478}, "rule_id": "valid_frame_timeout", "trigger_ticks": 502973639478}
+{"category": "capture", "event_id": 2, "evidence": {"count": 834, "observation": "counter_delta_at_poll"}, "rule_id": "local:fifo_overflow", "trigger_ticks": 511356808523}
+{"category": "protocol", "event_id": 3, "evidence": {"kind": "crc_errors", "raw_offset": 4066, "ticks": 511361859637}, "rule_id": "protocol:crc_errors", "trigger_ticks": 511361859637}
+{"category": "protocol", "event_id": 4, "evidence": {"count": 62, "kind": "interframe_noise", "raw_offset": 4066, "ticks": 511361859637}, "rule_id": "protocol:interframe_noise", "trigger_ticks": 511361859637}
+{"category": "protocol", "event_id": 5, "evidence": {"count": 28, "kind": "sequence_missing", "raw_offset": 4128, "ticks": 511371859586}, "rule_id": "protocol:sequence_missing", "trigger_ticks": 511371859586}

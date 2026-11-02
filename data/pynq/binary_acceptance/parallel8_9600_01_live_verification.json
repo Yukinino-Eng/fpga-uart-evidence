@@ -1,0 +1,10 @@
+{
+  "live_samples": 93,
+  "live_max_windows": 18,
+  "live_max_frames": 200,
+  "view_errors": 0,
+  "device_trigger_seconds": [
+    6.04892807,
+    14.04888539
+  ]
+}

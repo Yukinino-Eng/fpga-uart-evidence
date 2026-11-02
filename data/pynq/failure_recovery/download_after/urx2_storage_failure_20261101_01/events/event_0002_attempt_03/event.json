@@ -1,0 +1,36 @@
+{
+  "attempt": 3,
+  "available_end_ticks": 526713520287,
+  "capture_start_ticks": 516756126047,
+  "covered_end_ticks": 526711912229,
+  "covered_start_ticks": 525711912229,
+  "desired_end_ticks": 526711912229,
+  "desired_start_ticks": 525711912229,
+  "files": {
+    "frames.jsonl": "3cf571bdf7a4199e1c78ff5b2d58facd6af392a8756e76078649d60f24478d2d",
+    "raw.bin": "ae9814347e55d9c66d53eb03aff0d027a540b3811a10195a8c4df06956a4feeb",
+    "timestamps.bin": "084418b0656cec7f5e4cc8a0ac6f60cd1f5c71b8b9daea5ec4962bf52a1ecb85"
+  },
+  "frame_count": 111,
+  "frames_end": 67522,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 3328,
+  "raw_entries": 3330,
+  "raw_start": 307,
+  "trigger": {
+    "category": "device",
+    "event_id": 2,
+    "evidence": {
+      "field": "status",
+      "raw_end": 1808,
+      "raw_start": 1778,
+      "raw_value": 1,
+      "value": 1
+    },
+    "rule_id": "status_fault",
+    "trigger_ticks": 526211912229
+  }
+}

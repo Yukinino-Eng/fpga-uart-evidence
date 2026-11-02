@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "results": [
+    {
+      "status": "PASS_EXACT_BYTES",
+      "received_bytes": 432000,
+      "timing": "PASS_FRAME_START_SCHEDULE",
+      "hardware_accessed_by_this_tool": false,
+      "max_deviation_cycles": 0,
+      "aligned_initial_latency_cycles": 965600,
+      "name": "load_180s",
+      "clock_hz": 250000,
+      "source": "XSim_UART_PIN",
+      "hardware_accessed": false
+    },
+    {
+      "status": "PASS_FULL_CLOCK_WAVE_AND_BYTES",
+      "clocks_per_bit": 10417,
+      "name": "wave_9600",
+      "clock_hz": 100000000,
+      "source": "XSim_UART_PIN",
+      "hardware_accessed": false
+    },
+    {
+      "status": "PASS_FULL_CLOCK_WAVE_AND_BYTES",
+      "clocks_per_bit": 868,
+      "name": "wave_115200",
+      "clock_hz": 100000000,
+      "source": "XSim_UART_PIN",
+      "hardware_accessed": false
+    }
+  ],
+  "tests": 3
+}

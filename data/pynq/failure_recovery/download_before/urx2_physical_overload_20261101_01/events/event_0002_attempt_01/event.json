@@ -1,0 +1,33 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 511742558898,
+  "capture_start_ticks": 502948639478,
+  "covered_end_ticks": 511742558898,
+  "covered_start_ticks": 510856808523,
+  "desired_end_ticks": 511856808523,
+  "desired_start_ticks": 510856808523,
+  "files": {
+    "frames.jsonl": "2f05d744655031d809ea95538c2c57390e24a24b15aab1debe3a09f01c547b02",
+    "raw.bin": "e0b394f7949d09ef61c31cf927d14bb2614028798a3d91774d5195e8634bbfef",
+    "timestamps.bin": "d3f0119c29c24ad6ef713e5348c64ea44035566600fe82293f654756f88de81d"
+  },
+  "frame_count": 172,
+  "frames_end": 105037,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": true,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 5344,
+  "raw_entries": 5344,
+  "raw_start": 3330,
+  "trigger": {
+    "category": "capture",
+    "event_id": 2,
+    "evidence": {
+      "count": 834,
+      "observation": "counter_delta_at_poll"
+    },
+    "rule_id": "local:fifo_overflow",
+    "trigger_ticks": 511356808523
+  }
+}

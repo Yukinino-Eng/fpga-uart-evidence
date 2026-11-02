@@ -1,0 +1,23 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 31 20:11:34 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/load_180s/xsim_script.tcl
+# xsim {load_180s} -testplusarg BAUD=115200 -testplusarg CASE=0 -testplusarg SHORT=0 -testplusarg OUT=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/load_180s -wdb {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/load_180s/wave.wdb} -autoloadwcfg -tclbatch {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_wave.tcl}
+Time resolution is 1 ps
+source D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_wave.tcl
+## log_wave /tb_ego1_urx2/tx /tb_ego1_urx2/mirror /tb_ego1_urx2/leds /tb_ego1_urx2/reset_n /tb_ego1_urx2/button /tb_ego1_urx2/switches
+WARNING: [Simtcl 6-55] No matching HDL object or HDL scope found
+## run all
+OUTPUT_DIR=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/load_180s fd=-20000 starts=-19999
+TEST_PASS baud=115200 case=0 fps=50 clk=250000 bytes=432000
+$finish called at time : 450020555 ns : File "D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/tb/tb_ego1_urx2.sv" Line 73
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 227.676 ; gain = 0.000
+## exit
+INFO: xsimkernel Simulation Memory Usage: 10432 KB (Peak: 10432 KB), Simulation CPU Usage: 13249 ms
+INFO: [Common 17-206] Exiting xsim at Sat Oct 31 20:11:49 2026...

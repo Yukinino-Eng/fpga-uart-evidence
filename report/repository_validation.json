@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-02",
+  "status": "PASS_OFFLINE_RELEASE_CHECKS",
+  "software_tests": {
+    "run": 79,
+    "passed": 76,
+    "skipped": 3,
+    "failed": 0,
+    "skips": "optional older hardware traces intentionally excluded"
+  },
+  "raw_record_replay": {
+    "sessions": 13,
+    "frames": 17972,
+    "status": "PASS_FILE_HASH_DECODE_AND_EVENT_REPLAY",
+    "note": "Includes intentionally failed acquisition/protocol cases; replay verification does not relabel them as healthy."
+  },
+  "skill_helper_checks": {
+    "passed": 15,
+    "status": "PASS_SKILL_HELPERS",
+    "environment_note": "Python 3.13 private temporary-directory ACL prevented sandbox execution; unchanged self-test passed outside sandbox."
+  },
+  "ego1": {
+    "input_archive_manifest": "PASS_ALL_ORIGINAL_HASHES",
+    "normalized_package": "PASS",
+    "parallel8_record_recheck": "PASS_EXACT_BYTES_AND_FRAME_START_SCHEDULE"
+  },
+  "vivado_preflight": {
+    "version": "2025.2",
+    "status": "PASS_PROJECT_BD_IP_TARGETS_AND_TOP_WRAPPER",
+    "log": "report/checks/vivado_preflight.log",
+    "environment_note": "First sandbox launch could not write Vivado user settings; outside-sandbox project preflight passed."
+  },
+  "new_synthesis_or_implementation_run": false,
+  "new_rtl_simulation_run": false,
+  "new_hardware_access": false,
+  "paths": {
+    "status": "PASS_ASCII_ENGLISH",
+    "fixed_name_exceptions": [
+      "README.md",
+      "SKILL.md"
+    ]
+  },
+  "source_syntax": {
+    "python_files": 54,
+    "status": "PASS_AST"
+  },
+  "sensitive_literal_scan": {
+    "status": "PASS_NO_MATCHES",
+    "patterns": [
+      "private_key",
+      "github_token",
+      "auth_literal",
+      "jupyter_token"
+    ],
+    "scope": "text source, configuration, HTML and selected evidence logs"
+  },
+  "firmware": "PYNQ bit/HWH/XSA and EGo1 release2 preserved from verified snapshots",
+  "runtime_deployment": {
+    "status": "PASS_NEW_DIRECTORY_AND_SOURCE_HASHES",
+    "files": 32,
+    "hardware_accessed": false
+  },
+  "excluded": [
+    "car-side firmware/source",
+    "superseded projects",
+    "old delivery archives",
+    "generated Vivado and waveform caches",
+    "local authentication and console automation"
+  ],
+  "changes_to_runtime": "Notebook explanatory title only; code cells and runtime modules preserved",
+  "git_push_verification": "Remote commit and file list are checked after push; result reported in chat."
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "path_base": "full_project_root",
+  "scope": "Source provenance for nine skills; case quotes come from the supplied conversation, not a separately archived full chat transcript. Source records are not copied into the skill-only ZIP.",
+  "attribution": "The 2026-10-20 drafts retain their original attribution. Codex organized six implementation skills and added three decision/UX skills from this collaboration on 2026-11-01.",
+  "sources": [
+    {
+      "id": "startup_fix",
+      "path": "build/uart_startup_20261101/completion.json",
+      "bytes": 118457,
+      "sha256": "6b0cf08759a720c4ed41139cc162cd9e87ea6848c8d8844f6904f142cf8e1150"
+    },
+    {
+      "id": "latest_binary",
+      "path": "build/uart_latest_binary_acceptance_20261101_01/completion.json",
+      "bytes": 15546,
+      "sha256": "e84fa85a3352c10e9b38d2ccc9ad753d8f8fdf2cdb90191826fb0eaed5e8cc51"
+    },
+    {
+      "id": "overload_and_storage",
+      "path": "build/uart_failure_acceptance_20261101_01/completion.json",
+      "bytes": 7018,
+      "sha256": "09d7e79d56a5555494b561da02d20da799c67e62d86e06f94cbf03ed91f1f43c"
+    },
+    {
+      "id": "power_recovery",
+      "path": "build/uart_power_recovery_20261101_01/completion.json",
+      "bytes": 6887,
+      "sha256": "754f6360bb2ca89aa8ff4a057f79d889ece4b955b3e68bd37c5900019b1afda9"
+    },
+    {
+      "id": "runtime_version",
+      "path": "deliverables/urx2_verified_version_20261101_v1.json",
+      "bytes": 1882,
+      "sha256": "93901e42a462c7bc6b2f7ac10373e03b3336fa4e771f665d442e18a65543e505"
+    },
+    {
+      "id": "latest_binary_note",
+      "path": "deliverables/latest_binary_acceptance_20261101.md",
+      "bytes": 4569,
+      "sha256": "a9a750cff6ce21376b02e549e2229324541b372b80ff456128be83ca2cd31fc3"
+    },
+    {
+      "id": "power_recovery_note",
+      "path": "deliverables/power_recovery_acceptance_20261101.md",
+      "bytes": 2629,
+      "sha256": "6e05cf9af152391b5e19c9f00184c9afc60d55901c6894c9c41af3e7898e4028"
+    },
+    {
+      "id": "startup_implementation",
+      "path": "docs/uart-monitor/startup-sync-fix.md",
+      "bytes": 4789,
+      "sha256": "68bc4a5de1d45d42bf72dbf34bc495cd95544fd07c410ed1e6c78bfa149c4746"
+    },
+    {
+      "id": "hardware_compiler",
+      "path": "scripts/uart_monitor/hardware.py",
+      "bytes": 7967,
+      "sha256": "10ada38ef05924729f230c8347d6188f5bd1d5d2d4846476266f6bcd478e0622"
+    },
+    {
+      "id": "archive_implementation",
+      "path": "scripts/uart_monitor/archive.py",
+      "bytes": 16969,
+      "sha256": "9b1dfdeb2bd395f6fd25e26066e0ba4dd7dc999e424a4cd690577f4f45bc9126"
+    },
+    {
+      "id": "replay_implementation",
+      "path": "scripts/uart_monitor_cli.py",
+      "bytes": 6734,
+      "sha256": "dbc0d2d230c40a24585bc513d6e419852e1916269914a9bae205957e5f48f5e4"
+    },
+    {
+      "path": "skill_pack_by_dafantong/README.md",
+      "bytes": 2940,
+      "sha256": "d2e5a365b5b09be04850cbe1ba2c704a286c96fd39e64eebf92126cd62fa8e19"
+    },
+    {
+      "path": "skill_pack_by_dafantong/AUTHOR.md",
+      "bytes": 532,
+      "sha256": "4fbbb805d42fb8f3eabd2a4e96b4f321966d20baca35fbcd3dc5ce52fe507f83"
+    },
+    {
+      "path": "skill_pack_by_dafantong/dma-capture-integrity.md",
+      "bytes": 2230,
+      "sha256": "ecc72c5b5d11cef27592666943e06126cdb6faf7cd38b11c21b91b1697c08e55"
+    },
+    {
+      "path": "skill_pack_by_dafantong/golden-reference-regression.md",
+      "bytes": 2643,
+      "sha256": "369c23527335894b9b4f65981a2f9200b9029e6d3b8a61fe1cf948dbd58c73d1"
+    },
+    {
+      "path": "skill_pack_by_dafantong/pitfalls-pynq-z2.md",
+      "bytes": 2364,
+      "sha256": "684c7b2ecfea0ea40e2236daeee7b4e4ff4ae3f680a55fb1a57ff3b11cedf043"
+    },
+    {
+      "path": "skill_pack_by_dafantong/pynq-overlay-load-and-verify.md",
+      "bytes": 2694,
+      "sha256": "0a3b8623f818ec5dde2aa4f1cb95cac0275cd4b7df70547a62f9550ed5a9189d"
+    },
+    {
+      "path": "skill_pack_by_dafantong/release-self-verification.md",
+      "bytes": 2429,
+      "sha256": "9d4b1613e4a0c6f4cb9a9005c4b9b218df16e1f0f81dad8510e3fd8862039b13"
+    },
+    {
+      "path": "build/pynq_z2/final_extraction_r4/validation_summary.json",
+      "bytes": 9714,
+      "sha256": "88ed25f88e441dfabc7ecac5eb133645f8dde55226a40145bb021de1b42a1813"
+    },
+    {
+      "path": "build/pynq_z2/full_reproduction_receipt/report.json",
+      "bytes": 6339,
+      "sha256": "3d78aa2a28db072878d7228a7c31c84f4b8961c37f9edd1f18e5948ff68c768f"
+    },
+    {
+      "path": "build/pynq_z2/full_reproduction_receipt/orchestration.json",
+      "bytes": 280,
+      "sha256": "df7a44e40b1cfce1a2ea76b1536b41bfd0863ce767048d86fb58e50f6eea8980"
+    },
+    {
+      "path": "deliverables/pynq_uart_evidence_skill_20261101_v1.zip",
+      "bytes": 32045,
+      "sha256": "7c52e43592d6c1daecead56ea62bfc46bb016d177d674931b18d8493e2a794b2"
+    },
+    {
+      "path": "docs/deadline-plan-2026-11-04.md",
+      "bytes": 1432,
+      "sha256": "1714d970835e477ca4d3d46be77f6cedebc1590f4a635abb6b3821d6bf511644"
+    },
+    {
+      "path": "docs/non-device-development-plan.md",
+      "bytes": 4034,
+      "sha256": "0b499b39e2ab7678d1c8fc844349df684fe6ca464eec2329d17dc373fe118f00"
+    },
+    {
+      "path": "docs/pynq-z2-transition-agreement.md",
+      "bytes": 13954,
+      "sha256": "54f2c2133e4b113fb271a6ac066cfef53336de87ca964112640e75fc1be76417"
+    },
+    {
+      "path": "docs/uart-monitor/README.md",
+      "bytes": 7556,
+      "sha256": "798af4b7c9a8f5bb2d44ff07436d343cd65738dfdf43e58712906340de3cdca4"
+    },
+    {
+      "path": "docs/uart-monitor/visualization.md",
+      "bytes": 6690,
+      "sha256": "4f4aa8be16f3eae60493b121188194318ea8a8390d0a3c6ebdad6e19797c40fd"
+    },
+    {
+      "path": "docs/uart-monitor/notebook-live-check.md",
+      "bytes": 5312,
+      "sha256": "36c38b17aacc0adbf9c2b434edc39075f805fc2b5370699a684a9ba46a52b056"
+    },
+    {
+      "path": "docs/uart-monitor/fpga-detector.md",
+      "bytes": 15953,
+      "sha256": "11fbc8f9bd78d7dbb4c31e2081032e96735dc54e03c9c2c2f347697fea97e0d6"
+    },
+    {
+      "path": "docs/uart-monitor/same-bit-text-check.md",
+      "bytes": 4823,
+      "sha256": "2d3b72a57640ccebfb631b5434fc6666962b2f93e4df9c137278eea4dfb6df8f"
+    },
+    {
+      "path": "build/uart_live_run_20261101/completion.json",
+      "bytes": 76799,
+      "sha256": "91b856668efa7fff190a80dd501140d733d65e6205a8b73fa115c881f11141cc"
+    },
+    {
+      "path": "build/uart_text_acceptance_20261101_01/completion.json",
+      "bytes": 10904,
+      "sha256": "6754ca469918f924477d12e0fd349bb7a6a84bf4f6e09176d9cc4dc9b405486b"
+    },
+    {
+      "path": "deliverables/acceptance_and_scoring_checklist_20261101.md",
+      "bytes": 18979,
+      "sha256": "9fe758f8e4bbc0058f3c6c2fdf692be92c91fadb0fd09279cf1d432d573ee5f7"
+    },
+    {
+      "path": "deliverables/fpga-monitoring-skills-20261101-v2.zip",
+      "bytes": 47542,
+      "sha256": "7b57f47a27c2b316d566f8d1656e994d1f4dca7af15966e201f125da77b56c5e"
+    },
+    {
+      "path": "deliverables/fpga-monitoring-skills-20261101-v2.validation.json",
+      "bytes": 3689,
+      "sha256": "ace56391e04fb2f3dadf3d21e9ea1a5207dd2202ce8dd6d76d123872b4f9e65c"
+    }
+  ]
+}

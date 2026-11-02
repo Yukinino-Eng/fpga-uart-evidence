@@ -1,0 +1,19 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 31 20:09:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sender_100000000_10_0/xsim_script.tcl
+# xsim {sender_100000000_10_0} -testplusarg BAUD=9600 -testplusarg CASE=0 -testplusarg LONG=0 -testplusarg SHORT=2 -testplusarg OUT=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_20s_10fps_100000000Hz_short -wdb {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_20s_10fps_100000000Hz_short/wave.wdb} -autoloadwcfg -tclbatch {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_run.tcl}
+Time resolution is 1 ps
+source D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_run.tcl
+## run all
+OUTPUT_DIR=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_20s_10fps_100000000Hz_short fd=-20000 starts=-19999
+TEST_PASS baud=9600 case=0 fps=10 clk=100000000 bytes=96
+$finish called at time : 158162555 ns : File "D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/tb/tb_ego1_urx2.sv" Line 73
+## exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 31 20:09:57 2026...

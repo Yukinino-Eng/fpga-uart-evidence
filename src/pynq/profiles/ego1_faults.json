@@ -1,0 +1,210 @@
+{
+  "profile_version": 1,
+  "id": "ego1_car_tlm1_synthetic_faults",
+  "description": "EGo1 synthetic CAR-TLM1-compatible validation source; no real car measurement",
+  "transport": {
+    "baud": 115200,
+    "format": "8N1"
+  },
+  "framing": {
+    "kind": "binary",
+    "sync": "a55a",
+    "length": 48,
+    "constants": [
+      {
+        "offset": 2,
+        "hex": "0130"
+      }
+    ]
+  },
+  "checksum": {
+    "kind": "crc32_iso_hdlc",
+    "start": 0,
+    "end": 44,
+    "offset": 44,
+    "byte_order": "little"
+  },
+  "fields": [
+    {
+      "name": "sequence",
+      "offset": 4,
+      "type": "u32"
+    },
+    {
+      "name": "uptime_ms",
+      "offset": 8,
+      "type": "u32"
+    },
+    {
+      "name": "imu_sample_count",
+      "offset": 12,
+      "type": "u32"
+    },
+    {
+      "name": "pitch_mdeg",
+      "offset": 16,
+      "type": "i32",
+      "scale": 0.001,
+      "unit": "deg",
+      "valid_when": {
+        "field": "flags",
+        "mask": 3,
+        "equals": 3
+      },
+      "invalid_values": [
+        -2147483648
+      ]
+    },
+    {
+      "name": "rate_mdps",
+      "offset": 20,
+      "type": "i32",
+      "scale": 0.001,
+      "unit": "deg/s",
+      "valid_when": {
+        "field": "flags",
+        "mask": 3,
+        "equals": 3
+      },
+      "invalid_values": [
+        -2147483648
+      ]
+    },
+    {
+      "name": "encoder_e1",
+      "offset": 24,
+      "type": "i32"
+    },
+    {
+      "name": "encoder_e2",
+      "offset": 28,
+      "type": "i32"
+    },
+    {
+      "name": "pwm_a_counts",
+      "offset": 32,
+      "type": "u16",
+      "min": 0,
+      "max": 400,
+      "unit": "timer_counts"
+    },
+    {
+      "name": "pwm_b_counts",
+      "offset": 34,
+      "type": "u16",
+      "min": 0,
+      "max": 400,
+      "unit": "timer_counts"
+    },
+    {
+      "name": "flags",
+      "offset": 36,
+      "type": "u16",
+      "allowed_mask": 61951,
+      "forbidden_mask_values": [
+        {
+          "mask": 96,
+          "values": [
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fault_code",
+      "offset": 38,
+      "type": "u16"
+    },
+    {
+      "name": "tx_skipped",
+      "offset": 40,
+      "type": "u16"
+    },
+    {
+      "name": "imu_age_ms",
+      "offset": 42,
+      "type": "u16"
+    }
+  ],
+  "sequence": {
+    "field": "sequence",
+    "bits": 32,
+    "time_field": "uptime_ms",
+    "time_bits": 32
+  },
+  "health": {
+    "valid_field": "flags",
+    "valid_mask": 3,
+    "age_field": "imu_age_ms",
+    "tx_skipped_field": "tx_skipped"
+  },
+  "rules": [
+    {
+      "id": "device_fault",
+      "kind": "compare",
+      "field": "fault_code",
+      "op": "ne",
+      "value": 0,
+      "duration_ms": 0
+    },
+    {
+      "id": "imu_invalid",
+      "kind": "invalid",
+      "field": "pitch_mdeg",
+      "duration_ms": 0
+    },
+    {
+      "id": "imu_stale",
+      "kind": "compare",
+      "field": "imu_age_ms",
+      "op": "gt",
+      "value": 30,
+      "duration_ms": 0
+    },
+    {
+      "id": "sender_skipped",
+      "kind": "compare",
+      "field": "tx_skipped",
+      "op": "gt",
+      "value": 0,
+      "duration_ms": 0
+    },
+    {
+      "id": "pitch_limit",
+      "kind": "range",
+      "field": "pitch_mdeg",
+      "min": -10,
+      "max": 10,
+      "duration_ms": 100
+    }
+  ],
+  "timing": {
+    "valid_frame_timeout_ms": 250
+  },
+  "evidence": {
+    "pre_seconds": 5,
+    "post_seconds": 5,
+    "mode": "continuous",
+    "max_pending": 32,
+    "max_windows": 100
+  },
+  "display": {
+    "name": "EGo1合成二进制 · 普通故障验证",
+    "default_field": "pitch_mdeg",
+    "fields": {
+      "sequence": "帧序号",
+      "uptime_ms": "设备运行时间",
+      "imu_sample_count": "IMU 采样计数",
+      "pitch_mdeg": "车身倾角",
+      "rate_mdps": "角速度",
+      "encoder_e1": "编码器 E1",
+      "encoder_e2": "编码器 E2",
+      "pwm_a_counts": "A路 PWM",
+      "pwm_b_counts": "B路 PWM",
+      "flags": "有效性标志",
+      "fault_code": "设备故障码",
+      "tx_skipped": "遥测跳发计数",
+      "imu_age_ms": "IMU 数据年龄"
+    }
+  }
+}

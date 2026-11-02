@@ -1,0 +1,9 @@
+RULE_LANE_COUNT=8
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[0].lane REF=system_uart_rx_0_0_urx2_rule_lane
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[1].lane REF=system_uart_rx_0_0_urx2_rule_lane_0
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[2].lane REF=system_uart_rx_0_0_urx2_rule_lane_1
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[3].lane REF=system_uart_rx_0_0_urx2_rule_lane_2
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[4].lane REF=system_uart_rx_0_0_urx2_rule_lane_3
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[5].lane REF=system_uart_rx_0_0_urx2_rule_lane_4
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[6].lane REF=system_uart_rx_0_0_urx2_rule_lane_5
+LANE=system_i/uart_rx_0/inst/u_axi/detector/rules[7].lane REF=system_uart_rx_0_0_urx2_rule_lane_6

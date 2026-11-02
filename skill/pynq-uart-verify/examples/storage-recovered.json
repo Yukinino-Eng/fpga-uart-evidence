@@ -1,0 +1,12 @@
+{
+  "observed": {
+    "assessment": {"capture_integrity": "PASS", "protocol_integrity": "PASS", "device_health": "FAIL"},
+    "frames": 200,
+    "device_events": 1,
+    "saved_windows": 2,
+    "complete_device_windows": 1,
+    "failed_windows": 0,
+    "pending_windows": 0
+  },
+  "replay": {"status": "VERIFIED", "logical_events_match": true}
+}

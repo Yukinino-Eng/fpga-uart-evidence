@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 运行环境与工具排错"
+  short_description: "核对解释器、SDK、工具退出与时间来源，保留环境故障的证据"
+  default_prompt: "请使用 $pynq-runtime-debug 排查当前运行环境，区分工具失败、版本错配和设计错误，并说明验证依据。"

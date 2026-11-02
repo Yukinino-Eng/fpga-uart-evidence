@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA 文件封存与交付核验"
+  short_description: "封存文件集合与摘要，在全新解压目录检查交付内容和历史证据"
+  default_prompt: "请使用 $fpga-release-verify 核验指定交付目录或压缩包，保留文件清单、解压复核结果和未覆盖范围。"

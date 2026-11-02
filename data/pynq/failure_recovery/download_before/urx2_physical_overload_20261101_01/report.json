@@ -1,0 +1,246 @@
+{
+  "assessment": "Observed configured rules only; not complete application acceptance",
+  "capture_integrity": "FAIL",
+  "capture_seconds": 87.98142419200121,
+  "car_application_acceptance": false,
+  "detection_source": "software",
+  "device_health": "UNKNOWN",
+  "elapsed_seconds": 89.85542130900103,
+  "end_ticks": 511742558898,
+  "error": null,
+  "event_counts": {
+    "local:fifo_overflow": 1,
+    "protocol:crc_errors": 1,
+    "protocol:interframe_noise": 1,
+    "protocol:sequence_missing": 1,
+    "valid_frame_timeout": 1
+  },
+  "events_total": 5,
+  "evidence": {
+    "accepted_count": 5,
+    "dropped_count": 0,
+    "error": null,
+    "failed_count": 0,
+    "max_pending": 8,
+    "max_windows": 100,
+    "mode": "continuous",
+    "pending_count": 0,
+    "pending_requests": [],
+    "recent_saved": [
+      {
+        "event_id": 1,
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0001_attempt_01",
+        "readback_verified": true
+      },
+      {
+        "event_id": 2,
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0002_attempt_01",
+        "readback_verified": true
+      },
+      {
+        "event_id": 3,
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0003_attempt_01",
+        "readback_verified": true
+      },
+      {
+        "event_id": 4,
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0004_attempt_01",
+        "readback_verified": true
+      },
+      {
+        "event_id": 5,
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0005_attempt_01",
+        "readback_verified": true
+      }
+    ],
+    "saved": {
+      "manifest": {
+        "attempt": 1,
+        "available_end_ticks": 511742558898,
+        "capture_start_ticks": 502948639478,
+        "covered_end_ticks": 511742558898,
+        "covered_start_ticks": 510871859586,
+        "desired_end_ticks": 511871859586,
+        "desired_start_ticks": 510871859586,
+        "files": {
+          "frames.jsonl": "56ba9f81ab7832aa759dcabfffa970e56daedd95ad0630598258cdaec9d5ea02",
+          "raw.bin": "f0314a1f759b4a1e3a60fb8eae964fdcd7babad5c93cf1ef88a066952d080855",
+          "timestamps.bin": "7fca043d5c08261487149a27c8e975cd78faca5b6e0684fed74669d2c43d0f9b"
+        },
+        "frame_count": 172,
+        "frames_end": 105037,
+        "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+        "post_clipped": true,
+        "pre_cache_clipped": false,
+        "pre_clipped": false,
+        "raw_end": 5344,
+        "raw_entries": 5344,
+        "raw_start": 3393,
+        "trigger": {
+          "category": "protocol",
+          "event_id": 5,
+          "evidence": {
+            "count": 28,
+            "kind": "sequence_missing",
+            "raw_offset": 4128,
+            "ticks": 511371859586
+          },
+          "rule_id": "protocol:sequence_missing",
+          "trigger_ticks": 511371859586
+        }
+      },
+      "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_physical_overload_20261101_01/events/event_0005_attempt_01",
+      "readback_verified": true
+    },
+    "saved_count": 5,
+    "state": "COMPLETED",
+    "windows_integrity": "PASS"
+  },
+  "files": {
+    "events.jsonl": "f6e5c4a358d0c7c380735365e2d5f83b093059abab406a826743d1011167c94b",
+    "frame_index.bin": "6154ed453dcaf446866878449fc4398853bb07d3bf98da311270fc03a48fb987",
+    "frames.jsonl": "497594a766207aef079e102664be59cbb6dcaa00264ecacd0e60b34091282d85",
+    "issues.jsonl": "4a954f59efaa11c000df006800c19ebb8b168ade531556b80d2d72a66ec4bb5f",
+    "profile.json": "0435202a387a9f6c2350fffdecad7c58e32aab3f15b9dab0bc4decf0b9ef35dc",
+    "provenance.json": "dc2ece0d957501f0ce85893bbe4a5f2bf61fa664304171560ff09ead643e2353",
+    "raw.bin": "b554804342488262ccd7bf484c7e90bbf6ee5ab79d1b7769747bbdb824c55c51",
+    "timestamps.bin": "524cc4247e8409e64f0f108d8a2da5b0a854b77d4591336e8fbc162903145445",
+    "window_index.jsonl": "45e09b0436114d4e9b40ca5f90de7d00b63b28f6fe88bd15a5e4b5838f0b2595"
+  },
+  "format": "URX1-session-v1",
+  "hardware_accessed": true,
+  "hardware_registers": {
+    "abi": 131072,
+    "baud": 115200,
+    "capabilities": 1023,
+    "clock_hz": 100000000,
+    "configuration": 3,
+    "consumed": 5344,
+    "control": 0,
+    "detector_enabled": 0,
+    "divisor": 868,
+    "event_consumed": 0,
+    "event_entries": 64,
+    "event_level": 0,
+    "event_overflows": 0,
+    "event_received": 0,
+    "fifo_entries": 4096,
+    "framing_errors": 0,
+    "hardware_active": 0,
+    "hardware_crc_errors": 0,
+    "hardware_discarded": 0,
+    "hardware_duplicates": 0,
+    "hardware_frames": 0,
+    "hardware_missing": 0,
+    "hardware_restarts": 0,
+    "hardware_semantic_errors": 0,
+    "host_buffer_capacity": 1024,
+    "host_buffer_error": null,
+    "host_buffer_high_water": 46,
+    "host_pending_events": 0,
+    "level": 0,
+    "overflows": 834,
+    "parser_buffered": 0,
+    "parser_overflows": 0,
+    "received": 6178,
+    "session": 7,
+    "status": 18
+  },
+  "last_frame": {
+    "device_time": 19900,
+    "end_ticks": 511741857686,
+    "fields": {
+      "sequence": 199,
+      "status": 0,
+      "temperature_mdeg": 25.0,
+      "uptime_ms": 19900,
+      "voltage_mv": 3.3000000000000003
+    },
+    "profile_id": "lab_ascii_v1",
+    "raw_end": 5344,
+    "raw_fields": {
+      "sequence": 199,
+      "status": 0,
+      "temperature_mdeg": 25000,
+      "uptime_ms": 19900,
+      "voltage_mv": 3300
+    },
+    "raw_start": 5312,
+    "sequence": 199,
+    "start_ticks": 511741588577,
+    "units": {
+      "sequence": "",
+      "status": "",
+      "temperature_mdeg": "degC",
+      "uptime_ms": "",
+      "voltage_mv": "V"
+    },
+    "validity": {
+      "sequence": true,
+      "status": true,
+      "temperature_mdeg": true,
+      "uptime_ms": true,
+      "voltage_mv": true
+    }
+  },
+  "parser": {
+    "bytes_seen": 5344,
+    "checksum_available": true,
+    "crc_errors": 1,
+    "discarded_bytes": 62,
+    "duplicates": 0,
+    "frames": 172,
+    "header_errors": 0,
+    "imu_invalid_frames": 0,
+    "interframe_discarded_bytes": 62,
+    "max_car_tx_skipped": 0,
+    "max_imu_age_ms": 0,
+    "restart_or_out_of_order": 0,
+    "semantic_errors": 0,
+    "sequence_available": true,
+    "sequence_missing": 28,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": false
+  },
+  "profile_id": "lab_ascii_v1",
+  "protocol_integrity": "FAIL",
+  "provenance": {
+    "created_utc": "2026-10-20T22:04:10.459075+00:00",
+    "hardware_accessed": true,
+    "software_files": {
+      "__init__.py": "54d20dd64b12dc20d81d26a9ad6c48cf959414f24b2e037a608cf8964031dea9",
+      "archive.py": "9b1dfdeb2bd395f6fd25e26066e0ba4dd7dc999e424a4cd690577f4f45bc9126",
+      "behavior.py": "c2cf35cae3896d28f0bfc0610f5cba51823023792ee0e30b955f42b04cd6f729",
+      "buffered.py": "0577cbe1ce006cf470e562057107c324efe574cd2ce0a029b82427a3296bcd01",
+      "decoder.py": "9a573ed493bff3197785582cd11b6f2f1c1c0314dc143e715b6cd1cc098ff5d7",
+      "hardware.py": "10ada38ef05924729f230c8347d6188f5bd1d5d2d4846476266f6bcd478e0622",
+      "profile.py": "0fb29177697fbfcf4bfa4406d4f0f9bab18d6f3a7f0b241849d2440cf0e50596",
+      "rules.py": "e2d525e8376b81afc744053e38b9bbbb666bb750260b33f95621e4f7600d4985",
+      "session.py": "90f27e49d7164367df1c6491f0ceb92121f4afe5a43efbe3868e301aa22dd10b",
+      "transport.py": "8f77d36653e848bff16f0a3984c79bccb81f9b7a7a82eca91865fe1cc5968a08",
+      "ui.py": "8c74624af9b6e21442265a7e9bf17f4d8841e9c33ae2c4b9523e127e303ee8bf",
+      "urx2.py": "4a46e13add0226323e8f059f4c3cf25fd344613cb533638e9e9e1f199cca833b",
+      "viewer.py": "715e5780da7d78d381d4a8ff14cfeb5a82ab4745e4bf367d7f8d617313499617"
+    },
+    "transport": {
+      "abi": 131072,
+      "bit_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+      "capabilities": 1023,
+      "clock_hz": 100000000,
+      "config_sha256": null,
+      "detection_source": "software",
+      "hwh_sha256": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
+      "overlay_id": 844649045,
+      "pin": "PMODA1/Y18",
+      "receive_buffer_chunk_bytes": 256,
+      "receive_buffer_chunks": 1024,
+      "receive_only": true,
+      "reprogrammed": false,
+      "timestamp_source": "URX2_100MHz_relative_hardware_counter",
+      "uart_sync_policy": "free_running_capture_gate"
+    },
+    "utc_source": "host_clock_not_independently_verified"
+  },
+  "start_ticks": 502948639478,
+  "status": "COMPLETED"
+}

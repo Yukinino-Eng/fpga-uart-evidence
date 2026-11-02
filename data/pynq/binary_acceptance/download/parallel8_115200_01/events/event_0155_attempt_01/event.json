@@ -1,0 +1,33 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 826258160519,
+  "capture_start_ticks": 822345266720,
+  "covered_end_ticks": 826256105503,
+  "covered_start_ticks": 825256105503,
+  "desired_end_ticks": 826256105503,
+  "desired_start_ticks": 825256105503,
+  "files": {
+    "frames.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamps.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "frame_count": 0,
+  "frames_end": 0,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 0,
+  "raw_entries": 0,
+  "raw_start": 0,
+  "trigger": {
+    "category": "capture",
+    "event_id": 155,
+    "evidence": {
+      "count": 13,
+      "observation": "counter_delta_at_poll"
+    },
+    "rule_id": "local:framing_error",
+    "trigger_ticks": 825756105503
+  }
+}

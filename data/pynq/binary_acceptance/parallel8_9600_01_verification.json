@@ -1,0 +1,106 @@
+{
+  "status": "PASS_PHYSICAL_BYTES_RULES_WINDOWS_AND_PC_REPLAY",
+  "case": "parallel8_9600_01",
+  "scenario": "parallel8",
+  "baud": 9600,
+  "firmware_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+  "same_bit_no_reprogramming": true,
+  "frames": 200,
+  "raw_bytes": 9600,
+  "raw_sha256": "103282f4441f277257ec4810636b35a5da73ab8c79ea28b2696bc9f5ce7e7a2c",
+  "raw_exact_reference": true,
+  "independent_replay": {
+    "status": "VERIFIED",
+    "frames": 200,
+    "hardware_accessed": false,
+    "logical_events_match": true,
+    "event_replay_note": "Rules replayed from raw bytes and timestamp index",
+    "note": "File verification/replay; no new physical acquisition"
+  },
+  "device_events": {
+    "parallel_0": 2,
+    "parallel_1": 2,
+    "parallel_2": 2,
+    "parallel_3": 2,
+    "parallel_4": 2,
+    "parallel_5": 2,
+    "parallel_6": 2,
+    "parallel_7": 2
+  },
+  "hardware_batch_sizes": [
+    8,
+    8
+  ],
+  "complete_device_windows": 16,
+  "outside_stream_timeouts": [
+    {
+      "category": "protocol",
+      "event_id": 1,
+      "evidence": {
+        "deadline_ticks": 843457945785,
+        "last_valid_ticks": 843432945785
+      },
+      "hardware_batch_id": 1,
+      "rule_id": "valid_frame_timeout",
+      "source": "fpga",
+      "trigger_ticks": 843457945785
+    },
+    {
+      "category": "protocol",
+      "event_id": 18,
+      "evidence": {
+        "deadline_ticks": 852648770321,
+        "last_valid_ticks": 852623770321
+      },
+      "hardware_batch_id": 4,
+      "rule_id": "valid_frame_timeout",
+      "source": "fpga",
+      "trigger_ticks": 852648770321
+    }
+  ],
+  "hardware_registers": {
+    "abi": 131072,
+    "baud": 9600,
+    "capabilities": 1023,
+    "clock_hz": 100000000,
+    "configuration": 3,
+    "consumed": 9600,
+    "control": 0,
+    "detector_enabled": 1,
+    "divisor": 10417,
+    "event_consumed": 4,
+    "event_entries": 64,
+    "event_level": 0,
+    "event_overflows": 0,
+    "event_received": 4,
+    "fifo_entries": 4096,
+    "framing_errors": 0,
+    "hardware_active": 0,
+    "hardware_crc_errors": 0,
+    "hardware_discarded": 0,
+    "hardware_duplicates": 0,
+    "hardware_frames": 200,
+    "hardware_missing": 0,
+    "hardware_restarts": 0,
+    "hardware_semantic_errors": 0,
+    "host_buffer_capacity": 1024,
+    "host_buffer_error": null,
+    "host_buffer_high_water": 25,
+    "host_pending_events": 0,
+    "level": 0,
+    "overflows": 0,
+    "parser_buffered": 0,
+    "parser_overflows": 0,
+    "received": 9600,
+    "session": 10,
+    "status": 2
+  },
+  "browser_samples": 116,
+  "browser_max_visible_windows": 18,
+  "browser_max_frames": 200,
+  "browser_live_matching_samples": 28,
+  "browser_live_max_windows": 18,
+  "browser_live_max_frames": 200,
+  "browser_payload_errors": [],
+  "artifact": "C:\\Users\\16501\\Documents\\FPGA_competition\\build\\uart_latest_binary_acceptance_20261101_01\\parallel8_9600_01_view.html"
+}

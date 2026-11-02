@@ -1,0 +1,1 @@
+9db7a76b41c4092b5c367cfe834e5a4237824deddf5b22aaacfab539a38f2674  firmware/ego1_urx2_release2.bit

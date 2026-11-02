@@ -1,0 +1,239 @@
+{
+  "checksum": {
+    "byte_order": "little",
+    "end": 44,
+    "kind": "crc32_iso_hdlc",
+    "offset": 44,
+    "start": 0
+  },
+  "description": "Existing CAR-TLM1; no change to STM32 firmware",
+  "display": {
+    "default_field": "pitch_mdeg",
+    "fields": {
+      "encoder_e1": "\u7f16\u7801\u5668 E1",
+      "encoder_e2": "\u7f16\u7801\u5668 E2",
+      "fault_code": "\u8bbe\u5907\u6545\u969c\u7801",
+      "flags": "\u6709\u6548\u6027\u6807\u5fd7",
+      "imu_age_ms": "IMU \u6570\u636e\u5e74\u9f84",
+      "imu_sample_count": "IMU \u91c7\u6837\u8ba1\u6570",
+      "pitch_mdeg": "\u8f66\u8eab\u503e\u89d2",
+      "pwm_a_counts": "A\u8def PWM",
+      "pwm_b_counts": "B\u8def PWM",
+      "rate_mdps": "\u89d2\u901f\u5ea6",
+      "sequence": "\u5e27\u5e8f\u53f7",
+      "tx_skipped": "\u9065\u6d4b\u8df3\u53d1\u8ba1\u6570",
+      "uptime_ms": "\u8bbe\u5907\u8fd0\u884c\u65f6\u95f4"
+    },
+    "name": "\u5e73\u8861\u5c0f\u8f66 \u00b7 CAR-TLM1"
+  },
+  "evidence": {
+    "max_pending": 32,
+    "max_windows": 100,
+    "mode": "continuous",
+    "post_seconds": 5,
+    "pre_seconds": 5
+  },
+  "fields": [
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "sequence",
+      "offset": 4,
+      "scale": 1,
+      "type": "u32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "uptime_ms",
+      "offset": 8,
+      "scale": 1,
+      "type": "u32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "imu_sample_count",
+      "offset": 12,
+      "scale": 1,
+      "type": "u32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "invalid_values": [
+        -2147483648
+      ],
+      "name": "pitch_mdeg",
+      "offset": 16,
+      "scale": 0.001,
+      "type": "i32",
+      "unit": "deg",
+      "valid_when": {
+        "equals": 3,
+        "field": "flags",
+        "mask": 3
+      }
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "invalid_values": [
+        -2147483648
+      ],
+      "name": "rate_mdps",
+      "offset": 20,
+      "scale": 0.001,
+      "type": "i32",
+      "unit": "deg/s",
+      "valid_when": {
+        "equals": 3,
+        "field": "flags",
+        "mask": 3
+      }
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "encoder_e1",
+      "offset": 24,
+      "scale": 1,
+      "type": "i32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "encoder_e2",
+      "offset": 28,
+      "scale": 1,
+      "type": "i32"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "max": 400,
+      "min": 0,
+      "name": "pwm_a_counts",
+      "offset": 32,
+      "scale": 1,
+      "type": "u16",
+      "unit": "timer_counts"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "max": 400,
+      "min": 0,
+      "name": "pwm_b_counts",
+      "offset": 34,
+      "scale": 1,
+      "type": "u16",
+      "unit": "timer_counts"
+    },
+    {
+      "allowed_mask": 61951,
+      "bias": 0,
+      "byte_order": "little",
+      "forbidden_mask_values": [
+        {
+          "mask": 96,
+          "values": [
+            96
+          ]
+        }
+      ],
+      "name": "flags",
+      "offset": 36,
+      "scale": 1,
+      "type": "u16"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "fault_code",
+      "offset": 38,
+      "scale": 1,
+      "type": "u16"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "tx_skipped",
+      "offset": 40,
+      "scale": 1,
+      "type": "u16"
+    },
+    {
+      "bias": 0,
+      "byte_order": "little",
+      "name": "imu_age_ms",
+      "offset": 42,
+      "scale": 1,
+      "type": "u16"
+    }
+  ],
+  "framing": {
+    "constants": [
+      {
+        "hex": "0130",
+        "offset": 2
+      }
+    ],
+    "kind": "binary",
+    "length": 48,
+    "sync": "a55a"
+  },
+  "health": {
+    "age_field": "imu_age_ms",
+    "tx_skipped_field": "tx_skipped",
+    "valid_field": "flags",
+    "valid_mask": 3
+  },
+  "id": "car_tlm1",
+  "profile_version": 1,
+  "rules": [
+    {
+      "duration_ms": 0,
+      "field": "fault_code",
+      "id": "device_fault",
+      "kind": "compare",
+      "op": "ne",
+      "value": 0
+    },
+    {
+      "duration_ms": 0,
+      "field": "pitch_mdeg",
+      "id": "imu_invalid",
+      "kind": "invalid"
+    },
+    {
+      "duration_ms": 0,
+      "field": "imu_age_ms",
+      "id": "imu_stale",
+      "kind": "compare",
+      "op": "gt",
+      "value": 30
+    },
+    {
+      "duration_ms": 0,
+      "field": "tx_skipped",
+      "id": "sender_skipped",
+      "kind": "compare",
+      "op": "gt",
+      "value": 0
+    }
+  ],
+  "sequence": {
+    "bits": 32,
+    "field": "sequence",
+    "time_bits": 32,
+    "time_field": "uptime_ms"
+  },
+  "timing": {
+    "valid_frame_timeout_ms": 250
+  },
+  "transport": {
+    "baud": 115200,
+    "format": "8N1"
+  }
+}

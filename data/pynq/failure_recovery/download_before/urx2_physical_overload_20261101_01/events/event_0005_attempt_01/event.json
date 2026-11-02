@@ -1,0 +1,35 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 511742558898,
+  "capture_start_ticks": 502948639478,
+  "covered_end_ticks": 511742558898,
+  "covered_start_ticks": 510871859586,
+  "desired_end_ticks": 511871859586,
+  "desired_start_ticks": 510871859586,
+  "files": {
+    "frames.jsonl": "56ba9f81ab7832aa759dcabfffa970e56daedd95ad0630598258cdaec9d5ea02",
+    "raw.bin": "f0314a1f759b4a1e3a60fb8eae964fdcd7babad5c93cf1ef88a066952d080855",
+    "timestamps.bin": "7fca043d5c08261487149a27c8e975cd78faca5b6e0684fed74669d2c43d0f9b"
+  },
+  "frame_count": 172,
+  "frames_end": 105037,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": true,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 5344,
+  "raw_entries": 5344,
+  "raw_start": 3393,
+  "trigger": {
+    "category": "protocol",
+    "event_id": 5,
+    "evidence": {
+      "count": 28,
+      "kind": "sequence_missing",
+      "raw_offset": 4128,
+      "ticks": 511371859586
+    },
+    "rule_id": "protocol:sequence_missing",
+    "trigger_ticks": 511371859586
+  }
+}

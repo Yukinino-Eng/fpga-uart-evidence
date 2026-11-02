@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "frames": 2000,
+  "raw_json_bytes": 2510942,
+  "wire_bytes": 192718,
+  "native_decode_roundtrip_seconds": 0.8760692000005292,
+  "corruption_rejected": true,
+  "status_semantics": {
+    "delayed": "\u6b63\u5728\u63a5\u6536",
+    "timeout": "\u63a5\u6536\u4e2d \u00b7 \u6709\u6548\u5e27\u8d85\u65f6",
+    "recovered": "\u6b63\u5728\u63a5\u6536",
+    "active": "\u63a5\u6536\u4e2d \u00b7 \u6709\u6548\u5e27\u8d85\u65f6"
+  }
+}

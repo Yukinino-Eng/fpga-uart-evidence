@@ -1,0 +1,23 @@
+{
+  "blocked_retry_attempt": 2,
+  "blocked_retry_error": "NotADirectoryError: [Errno 20] Not a directory: '/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_storage_failure_20261101_01/events/event_0001_attempt_02'",
+  "capture_restarted": false,
+  "device_fault_preserved": true,
+  "full_status_fault_window": true,
+  "initial_failed_windows": 2,
+  "recovered_attempt": 3,
+  "recovery_used_production_function": "retry_saved_session",
+  "saved_windows": 2,
+  "source_hashes": {
+    "events.jsonl": "5e1881592c7f2fb3123859789bc72c62798d74b3b14593345fee83fced420606",
+    "frame_index.bin": "260c834dcfafaa1413f6c36ae37985b82a91cc359587e1c540e2ecd6c8c0bdf2",
+    "frames.jsonl": "1f9362a2f9261dc854bdb0740649c436b91c4766ea76cfe101613373c803da9e",
+    "issues.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "profile.json": "0435202a387a9f6c2350fffdecad7c58e32aab3f15b9dab0bc4decf0b9ef35dc",
+    "provenance.json": "90eebedd168c064adc9608a16004e3eaa61ab629bba638caed034b504ab69907",
+    "raw.bin": "3d3a2abe2b42e1ad12f3695faca1ab940a8fef827826096421bb6bc33254e5fb",
+    "timestamps.bin": "aad98e3a8fc508ef7d007cc7b699a24abc9be21907afd65355c21dce0cc20df5"
+  },
+  "source_hashes_unchanged": true,
+  "status": "RECOVERED_AND_READBACK_VERIFIED"
+}

@@ -1,0 +1,26 @@
+{
+  "car_tlm1_ae61c0baddb3": {
+    "status": "VERIFIED",
+    "frames": 1414,
+    "hardware_accessed": false,
+    "logical_events_match": true,
+    "event_replay_note": "Rules replayed from raw bytes and timestamp index",
+    "note": "File verification/replay; no new physical acquisition",
+    "seconds": 28.42353758199988,
+    "capture_integrity": "PASS",
+    "protocol_integrity": "PASS",
+    "motor_active_frames": 0
+  },
+  "car_tlm1_f5568f98689b": {
+    "status": "VERIFIED",
+    "frames": 3610,
+    "hardware_accessed": false,
+    "logical_events_match": true,
+    "event_replay_note": "Rules replayed from raw bytes and timestamp index",
+    "note": "File verification/replay; no new physical acquisition",
+    "seconds": 73.13093810400005,
+    "capture_integrity": "PASS",
+    "protocol_integrity": "PASS",
+    "motor_active_frames": 0
+  }
+}

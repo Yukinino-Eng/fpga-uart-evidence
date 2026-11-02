@@ -1,0 +1,3 @@
+{"category": "protocol", "event_id": 1, "evidence": {"deadline_ticks": 863987630688, "last_valid_ticks": 863962630688}, "hardware_batch_id": 1, "rule_id": "valid_frame_timeout", "source": "fpga", "trigger_ticks": 863987630688}
+{"category": "device", "event_id": 2, "evidence": {"field": "pitch_mdeg", "raw_end": 3024, "raw_start": 2976, "raw_value": 20000, "value": 20.0}, "hardware_batch_id": 2, "rule_id": "pitch_limit", "source": "fpga", "trigger_ticks": 866423318173}
+{"category": "protocol", "event_id": 3, "evidence": {"deadline_ticks": 867818310827, "last_valid_ticks": 867793310827}, "hardware_batch_id": 3, "rule_id": "valid_frame_timeout", "source": "fpga", "trigger_ticks": 867818310827}

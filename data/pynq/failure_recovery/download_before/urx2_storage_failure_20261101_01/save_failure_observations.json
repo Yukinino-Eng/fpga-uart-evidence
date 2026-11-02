@@ -1,0 +1,42 @@
+[
+  {
+    "accepted_count": null,
+    "elapsed_seconds": null,
+    "evidence_state": null,
+    "failed_count": null,
+    "frames": 0,
+    "state": "IDLE"
+  },
+  {
+    "accepted_count": 1,
+    "elapsed_seconds": 0.25903967100020964,
+    "evidence_state": "POST_CAPTURE",
+    "failed_count": 0,
+    "frames": 0,
+    "state": "RUNNING"
+  },
+  {
+    "accepted_count": 1,
+    "elapsed_seconds": 5.421174183000403,
+    "evidence_state": "SAVE_FAILED",
+    "failed_count": 1,
+    "frames": 0,
+    "state": "RUNNING"
+  },
+  {
+    "accepted_count": 2,
+    "elapsed_seconds": 94.61566816099912,
+    "evidence_state": "SAVE_FAILED",
+    "failed_count": 1,
+    "frames": 61,
+    "state": "RUNNING"
+  },
+  {
+    "accepted_count": 2,
+    "elapsed_seconds": 100.09055771599924,
+    "evidence_state": "SAVE_FAILED",
+    "failed_count": 2,
+    "frames": 116,
+    "state": "RUNNING"
+  }
+]

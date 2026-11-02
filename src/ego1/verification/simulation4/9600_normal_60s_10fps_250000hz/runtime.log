@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 31 20:08:45 2026
+# Process ID         : 9564
+# Current directory  : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/build/simulation4
+# Command line       : xsim.exe -log D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_60s_10fps_250000Hz/runtime.log -mode tcl -source {xsim.dir/sender_250000_10_0/xsim_script.tcl}
+# Log file           : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_60s_10fps_250000Hz/runtime.log
+# Journal file       : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/build/simulation4\xsim.jou
+# Running On         : USER-20260305KE
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34056 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36204 MB
+# Available Virtual  : 24158 MB
+#-----------------------------------------------------------
+source xsim.dir/sender_250000_10_0/xsim_script.tcl
+# xsim {sender_250000_10_0} -testplusarg BAUD=9600 -testplusarg CASE=0 -testplusarg LONG=1 -testplusarg SHORT=0 -testplusarg OUT=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_60s_10fps_250000Hz -wdb {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_60s_10fps_250000Hz/wave.wdb} -autoloadwcfg -tclbatch {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_run.tcl}
+Time resolution is 1 ps
+source D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_run.tcl
+## run all
+OUTPUT_DIR=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/simulation4/9600_normal_60s_10fps_250000Hz fd=-20000 starts=-19999
+TEST_PASS baud=9600 case=0 fps=10 clk=250000 bytes=28800
+$finish called at time : 150025355 ns : File "D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/tb/tb_ego1_urx2.sv" Line 73
+## exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 31 20:08:51 2026...

@@ -1,0 +1,1 @@
+BUILD_PASS Vivado=2025.2 part=xc7a35tcsg324-1 fps=10 mode=-1 duration=0 WNS=0.480 WHS=0.122

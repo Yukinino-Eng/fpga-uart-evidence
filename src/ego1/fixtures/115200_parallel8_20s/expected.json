@@ -1,0 +1,264 @@
+{
+  "case": "parallel8",
+  "baud": 115200,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 868,
+  "schedule_count": 200,
+  "raw_bytes": 9600,
+  "stream_sha256": "103282f4441f277257ec4810636b35a5da73ab8c79ea28b2696bc9f5ce7e7a2c",
+  "parser": {
+    "bytes_seen": 9600,
+    "frames": 200,
+    "discarded_bytes": 0,
+    "interframe_discarded_bytes": 0,
+    "header_errors": 0,
+    "crc_errors": 0,
+    "semantic_errors": 0,
+    "sequence_missing": 0,
+    "duplicates": 0,
+    "restart_or_out_of_order": 0,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": true,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {
+    "parallel_0": 2,
+    "parallel_1": 2,
+    "parallel_2": 2,
+    "parallel_3": 2,
+    "parallel_4": 2,
+    "parallel_5": 2,
+    "parallel_6": 2,
+    "parallel_7": 2
+  },
+  "hardware_covered_event_counts": {
+    "parallel_0": 2,
+    "parallel_1": 2,
+    "parallel_2": 2,
+    "parallel_3": 2,
+    "parallel_4": 2,
+    "parallel_5": 2,
+    "parallel_6": 2,
+    "parallel_7": 2
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "parallel_0",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 2,
+      "rule_id": "parallel_1",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 3,
+      "rule_id": "parallel_2",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 4,
+      "rule_id": "parallel_3",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 5,
+      "rule_id": "parallel_4",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 6,
+      "rule_id": "parallel_5",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 7,
+      "rule_id": "parallel_6",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 8,
+      "rule_id": "parallel_7",
+      "category": "device",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 2880,
+        "raw_end": 2928
+      }
+    },
+    {
+      "event_id": 9,
+      "rule_id": "parallel_0",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 10,
+      "rule_id": "parallel_1",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 11,
+      "rule_id": "parallel_2",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 12,
+      "rule_id": "parallel_3",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 13,
+      "rule_id": "parallel_4",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 14,
+      "rule_id": "parallel_5",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 15,
+      "rule_id": "parallel_6",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    },
+    {
+      "event_id": 16,
+      "rule_id": "parallel_7",
+      "category": "device",
+      "trigger_ticks": 1400416300,
+      "evidence": {
+        "field": "fault_code",
+        "value": 20,
+        "raw_value": 20,
+        "raw_start": 6720,
+        "raw_end": 6768
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

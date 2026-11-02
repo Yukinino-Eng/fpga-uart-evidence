@@ -1,0 +1,4 @@
+interface:
+  display_name: "监测界面体验与工作流程设计"
+  short_description: "围绕用户任务设计协议字段、实时状态和连续故障记录，保持证据可读"
+  default_prompt: "请使用 $monitoring-ux-design 评估当前取证界面，改进状态含义、事件可读性和连续操作流程，并说明验证方法。"

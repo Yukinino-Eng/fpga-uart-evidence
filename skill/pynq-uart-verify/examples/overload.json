@@ -1,0 +1,9 @@
+{
+  "observed": {
+    "assessment": {"capture_integrity": "FAIL", "protocol_integrity": "FAIL", "device_health": "UNKNOWN"},
+    "raw_bytes": 5344,
+    "frames": 172,
+    "device_events": 0
+  },
+  "replay": {"status": "VERIFIED", "logical_events_match": null}
+}

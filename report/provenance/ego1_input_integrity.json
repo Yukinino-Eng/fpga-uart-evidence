@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "6bcc3521374448edb2e43eac421064fe5da237da6fa497c637eefaab94a3dc34",
+  "zip_crc": "PASS",
+  "original_manifest_files_verified": 427,
+  "selected_files": 394,
+  "excluded": [
+    "waveform databases",
+    "generated project recreation export",
+    "superseded input manifests",
+    "incomplete project template"
+  ],
+  "path_normalization": {
+    "README_队友先读.md": "handoff_readme.md",
+    "docs/01_协议与接线.md": "docs/protocol_and_wiring.md",
+    "docs/02_测试场景.md": "docs/test_scenarios.md",
+    "docs/03_实现与交回.md": "docs/implementation_handoff.md"
+  },
+  "new_hardware_access": false
+}

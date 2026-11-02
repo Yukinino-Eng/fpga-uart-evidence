@@ -1,0 +1,51 @@
+{
+  "case": "restart",
+  "baud": 115200,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 868,
+  "schedule_count": 200,
+  "raw_bytes": 9600,
+  "stream_sha256": "b774687b841abb487c0d78cea0d0d4c0d4badfdd512b896fd07b3e8eb8070f2d",
+  "parser": {
+    "bytes_seen": 9600,
+    "frames": 200,
+    "discarded_bytes": 0,
+    "interframe_discarded_bytes": 0,
+    "header_errors": 0,
+    "crc_errors": 0,
+    "semantic_errors": 0,
+    "sequence_missing": 0,
+    "duplicates": 0,
+    "restart_or_out_of_order": 1,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": false,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {},
+  "hardware_covered_event_counts": {
+    "protocol:restart_or_out_of_order": 1
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "protocol:restart_or_out_of_order",
+      "category": "protocol",
+      "trigger_ticks": 600416300,
+      "evidence": {
+        "kind": "restart_or_out_of_order",
+        "ticks": 600416300,
+        "raw_offset": 2880
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

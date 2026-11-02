@@ -1,0 +1,285 @@
+{
+  "output": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75",
+  "report": {
+    "assessment": "Observed configured rules only; not complete application acceptance",
+    "capture_integrity": "FAIL",
+    "capture_seconds": 45.934774933999506,
+    "car_application_acceptance": false,
+    "detection_source": "fpga",
+    "device_health": "UNKNOWN",
+    "elapsed_seconds": 47.37231581500055,
+    "end_ticks": 826936471428,
+    "error": null,
+    "event_counts": {
+      "local:framing_error": 378,
+      "valid_frame_timeout": 1
+    },
+    "events_total": 379,
+    "evidence": {
+      "accepted_count": 100,
+      "dropped_count": 279,
+      "error": null,
+      "failed_count": 0,
+      "max_pending": 32,
+      "max_windows": 100,
+      "mode": "continuous",
+      "pending_count": 0,
+      "pending_requests": [],
+      "recent_saved": [
+        {
+          "event_id": 284,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0284_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 286,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0286_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 289,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0289_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 292,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0292_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 295,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0295_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 298,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0298_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 300,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0300_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 302,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0302_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 303,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0303_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 318,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0318_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 320,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0320_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 323,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0323_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 326,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0326_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 328,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0328_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 331,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0331_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 333,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0333_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 337,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0337_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 340,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0340_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 343,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0343_attempt_01",
+          "readback_verified": true
+        },
+        {
+          "event_id": 346,
+          "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0346_attempt_01",
+          "readback_verified": true
+        }
+      ],
+      "saved": {
+        "manifest": {
+          "attempt": 1,
+          "available_end_ticks": 826936471428,
+          "capture_start_ticks": 822345266720,
+          "covered_end_ticks": 826936471428,
+          "covered_start_ticks": 826267232457,
+          "desired_end_ticks": 827267232457,
+          "desired_start_ticks": 826267232457,
+          "files": {
+            "frames.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "timestamps.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "frame_count": 0,
+          "frames_end": 0,
+          "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+          "post_clipped": true,
+          "pre_cache_clipped": false,
+          "pre_clipped": false,
+          "raw_end": 0,
+          "raw_entries": 0,
+          "raw_start": 0,
+          "trigger": {
+            "category": "capture",
+            "event_id": 346,
+            "evidence": {
+              "count": 35,
+              "observation": "counter_delta_at_poll"
+            },
+            "rule_id": "local:framing_error",
+            "trigger_ticks": 826767232457
+          }
+        },
+        "path": "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/ego1_car_tlm1_synthetic_parallel8_8623ab4ffc75/events/event_0346_attempt_01",
+        "readback_verified": true
+      },
+      "saved_count": 100,
+      "state": "COMPLETED",
+      "windows_integrity": "FAIL"
+    },
+    "files": {
+      "events.jsonl": "bdcce28464eb6fbbed051680e2fb7ab6ee92b110f7b8aebe84dc7c5919cf74f3",
+      "frame_index.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "frames.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hardware_events.jsonl": "438ec58237361580da3e2d55493163f87d9877ad859b31c9a7e5d654274d123a",
+      "issues.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile.json": "4f1d2e2463cfadf46b5a198956b7032266a728ffc9eef05c91694163552332a1",
+      "provenance.json": "33021b01c36f745ddfe52e3fe128d3071a7d554917f427ee5e17bc12947c6b6c",
+      "raw.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timestamps.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "window_index.jsonl": "51201cfe38911166ae61715690cde397954e47aaa0f88fa62070707d97376d30"
+    },
+    "format": "URX1-session-v1",
+    "hardware_accessed": true,
+    "hardware_registers": {
+      "abi": 131072,
+      "baud": 115200,
+      "capabilities": 1023,
+      "clock_hz": 100000000,
+      "configuration": 3,
+      "consumed": 0,
+      "control": 0,
+      "detector_enabled": 1,
+      "divisor": 868,
+      "event_consumed": 1,
+      "event_entries": 64,
+      "event_level": 0,
+      "event_overflows": 0,
+      "event_received": 1,
+      "fifo_entries": 4096,
+      "framing_errors": 17227,
+      "hardware_active": 0,
+      "hardware_crc_errors": 0,
+      "hardware_discarded": 0,
+      "hardware_duplicates": 0,
+      "hardware_frames": 0,
+      "hardware_missing": 0,
+      "hardware_restarts": 0,
+      "hardware_semantic_errors": 0,
+      "host_buffer_capacity": 1024,
+      "host_buffer_error": null,
+      "host_buffer_high_water": 32,
+      "host_pending_events": 0,
+      "level": 0,
+      "overflows": 0,
+      "parser_buffered": 0,
+      "parser_overflows": 0,
+      "received": 0,
+      "session": 9,
+      "status": 42
+    },
+    "last_frame": null,
+    "parser": {
+      "bytes_seen": 0,
+      "checksum_available": true,
+      "crc_errors": 0,
+      "discarded_bytes": 0,
+      "duplicates": 0,
+      "frames": 0,
+      "header_errors": 0,
+      "imu_invalid_frames": 0,
+      "interframe_discarded_bytes": 0,
+      "max_car_tx_skipped": 0,
+      "max_imu_age_ms": 0,
+      "restart_or_out_of_order": 0,
+      "semantic_errors": 0,
+      "sequence_available": true,
+      "sequence_missing": 0,
+      "trailing_partial_bytes": 0,
+      "transport_integrity_observed": false
+    },
+    "profile_id": "ego1_car_tlm1_synthetic_parallel8",
+    "protocol_integrity": "FAIL",
+    "provenance": {
+      "created_utc": "2026-10-20T22:57:24.723049+00:00",
+      "hardware_accessed": true,
+      "software_files": {
+        "__init__.py": "54d20dd64b12dc20d81d26a9ad6c48cf959414f24b2e037a608cf8964031dea9",
+        "archive.py": "9b1dfdeb2bd395f6fd25e26066e0ba4dd7dc999e424a4cd690577f4f45bc9126",
+        "behavior.py": "c2cf35cae3896d28f0bfc0610f5cba51823023792ee0e30b955f42b04cd6f729",
+        "buffered.py": "0577cbe1ce006cf470e562057107c324efe574cd2ce0a029b82427a3296bcd01",
+        "decoder.py": "9a573ed493bff3197785582cd11b6f2f1c1c0314dc143e715b6cd1cc098ff5d7",
+        "hardware.py": "10ada38ef05924729f230c8347d6188f5bd1d5d2d4846476266f6bcd478e0622",
+        "profile.py": "0fb29177697fbfcf4bfa4406d4f0f9bab18d6f3a7f0b241849d2440cf0e50596",
+        "rules.py": "e2d525e8376b81afc744053e38b9bbbb666bb750260b33f95621e4f7600d4985",
+        "session.py": "90f27e49d7164367df1c6491f0ceb92121f4afe5a43efbe3868e301aa22dd10b",
+        "transport.py": "8f77d36653e848bff16f0a3984c79bccb81f9b7a7a82eca91865fe1cc5968a08",
+        "ui.py": "8c74624af9b6e21442265a7e9bf17f4d8841e9c33ae2c4b9523e127e303ee8bf",
+        "urx2.py": "4a46e13add0226323e8f059f4c3cf25fd344613cb533638e9e9e1f199cca833b",
+        "viewer.py": "715e5780da7d78d381d4a8ff14cfeb5a82ab4745e4bf367d7f8d617313499617"
+      },
+      "transport": {
+        "abi": 131072,
+        "bit_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+        "capabilities": 1023,
+        "clock_hz": 100000000,
+        "config_sha256": "e42e9a677f5669cfe96b02eb1da9d689d52da99f39e1ab08b4c0f58dbb8289fd",
+        "detection_source": "fpga",
+        "hwh_sha256": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
+        "overlay_id": 844649045,
+        "pin": "PMODA1/Y18",
+        "receive_buffer_chunk_bytes": 256,
+        "receive_buffer_chunks": 1024,
+        "receive_only": true,
+        "reprogrammed": false,
+        "timestamp_source": "URX2_100MHz_relative_hardware_counter",
+        "uart_sync_policy": "free_running_capture_gate"
+      },
+      "utc_source": "host_clock_not_independently_verified"
+    },
+    "start_ticks": 822345266720,
+    "status": "COMPLETED"
+  },
+  "state": "COMPLETED"
+}

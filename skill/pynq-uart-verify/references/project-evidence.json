@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "client_date": "2026-11-01",
+  "path_base": "full_project_root",
+  "skill_scope": "Methods and offline tools; source references are not copied physical archives",
+  "sources": [
+    {
+      "id": "startup_fix",
+      "path": "build/uart_startup_20261101/completion.json",
+      "bytes": 118457,
+      "sha256": "6b0cf08759a720c4ed41139cc162cd9e87ea6848c8d8844f6904f142cf8e1150"
+    },
+    {
+      "id": "latest_binary",
+      "path": "build/uart_latest_binary_acceptance_20261101_01/completion.json",
+      "bytes": 15546,
+      "sha256": "e84fa85a3352c10e9b38d2ccc9ad753d8f8fdf2cdb90191826fb0eaed5e8cc51"
+    },
+    {
+      "id": "overload_and_storage",
+      "path": "build/uart_failure_acceptance_20261101_01/completion.json",
+      "bytes": 7018,
+      "sha256": "09d7e79d56a5555494b561da02d20da799c67e62d86e06f94cbf03ed91f1f43c"
+    },
+    {
+      "id": "power_recovery",
+      "path": "build/uart_power_recovery_20261101_01/completion.json",
+      "bytes": 6887,
+      "sha256": "754f6360bb2ca89aa8ff4a057f79d889ece4b955b3e68bd37c5900019b1afda9"
+    },
+    {
+      "id": "runtime_version",
+      "path": "deliverables/urx2_verified_version_20261101_v1.json",
+      "bytes": 1882,
+      "sha256": "93901e42a462c7bc6b2f7ac10373e03b3336fa4e771f665d442e18a65543e505"
+    },
+    {
+      "id": "latest_binary_note",
+      "path": "deliverables/latest_binary_acceptance_20261101.md",
+      "bytes": 4569,
+      "sha256": "a9a750cff6ce21376b02e549e2229324541b372b80ff456128be83ca2cd31fc3"
+    },
+    {
+      "id": "power_recovery_note",
+      "path": "deliverables/power_recovery_acceptance_20261101.md",
+      "bytes": 2629,
+      "sha256": "6e05cf9af152391b5e19c9f00184c9afc60d55901c6894c9c41af3e7898e4028"
+    },
+    {
+      "id": "startup_implementation",
+      "path": "docs/uart-monitor/startup-sync-fix.md",
+      "bytes": 4789,
+      "sha256": "68bc4a5de1d45d42bf72dbf34bc495cd95544fd07c410ed1e6c78bfa149c4746"
+    },
+    {
+      "id": "hardware_compiler",
+      "path": "scripts/uart_monitor/hardware.py",
+      "bytes": 7967,
+      "sha256": "10ada38ef05924729f230c8347d6188f5bd1d5d2d4846476266f6bcd478e0622"
+    },
+    {
+      "id": "archive_implementation",
+      "path": "scripts/uart_monitor/archive.py",
+      "bytes": 16969,
+      "sha256": "9b1dfdeb2bd395f6fd25e26066e0ba4dd7dc999e424a4cd690577f4f45bc9126"
+    },
+    {
+      "id": "replay_implementation",
+      "path": "scripts/uart_monitor_cli.py",
+      "bytes": 6734,
+      "sha256": "dbc0d2d230c40a24585bc513d6e419852e1916269914a9bae205957e5f48f5e4"
+    },
+    {
+      "id": "old_skill_readme",
+      "path": "skill_pack_by_dafantong/README.md",
+      "bytes": 2940,
+      "sha256": "d2e5a365b5b09be04850cbe1ba2c704a286c96fd39e64eebf92126cd62fa8e19"
+    }
+  ]
+}

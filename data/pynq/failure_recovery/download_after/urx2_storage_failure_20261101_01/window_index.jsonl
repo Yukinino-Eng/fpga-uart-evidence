@@ -1,0 +1,4 @@
+{"error": "NotADirectoryError: [Errno 20] Not a directory: '/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_storage_failure_20261101_01/events/event_0001_attempt_01'", "event_id": 1, "state": "SAVE_FAILED"}
+{"error": "NotADirectoryError: [Errno 20] Not a directory: '/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_storage_failure_20261101_01/events/event_0002_attempt_01'", "event_id": 2, "state": "SAVE_FAILED"}
+{"event_id": 1, "state": "SAVED", "path": "events/event_0001_attempt_03", "readback_verified": true}
+{"event_id": 2, "state": "SAVED", "path": "events/event_0002_attempt_03", "readback_verified": true}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 固件加载与身份核验"
+  short_description: "核对固件配对、运行身份与空闲条件，避免多页面或多版本混用"
+  default_prompt: "请使用 $pynq-overlay-verify 检查固件与运行身份，说明能否加载或重连，并保留操作前后依据。"

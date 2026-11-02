@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "scope": "Acceptance item 3: physical UART FIFO overload and actual event-window filesystem failure with durable retry recovery",
+  "verification": {
+    "status": "PASS",
+    "overload": {
+      "expected_capture_failure": true,
+      "verification": {
+        "status": "VERIFIED",
+        "frames": 172,
+        "hardware_accessed": false,
+        "logical_events_match": null,
+        "event_replay_note": "Local capture degradation prevents complete target-side attribution",
+        "note": "File verification/replay; no new physical acquisition"
+      },
+      "received": 6178,
+      "retained": 5344,
+      "dropped": 834,
+      "valid_frames": 172,
+      "device_health": "UNKNOWN",
+      "normal_pc_source": {
+        "status": "PASS_TEST_SOURCE_BYTES",
+        "source": "EGo1_synthetic_LAB_test_source",
+        "expected_scenario": "normal",
+        "expected_slots": 200,
+        "byte_exact_match": true,
+        "received_bytes": 6178,
+        "expected_bytes": 6178,
+        "first_difference_offset": null,
+        "counts": {
+          "valid_frames": 200,
+          "checksum_errors": 0,
+          "format_errors": 0,
+          "sequence_missing": 0,
+          "duplicates": 0,
+          "restart_or_out_of_order": 0
+        },
+        "received_sha256": "bea36972c0b4033ca24c93554a3ed138fa91a85eaa4986fc8647522ec5d1cce7",
+        "expected_sha256": "bea36972c0b4033ca24c93554a3ed138fa91a85eaa4986fc8647522ec5d1cce7",
+        "timing_verified": false,
+        "timestamp_note": "PC host read times are not per-byte FPGA timestamps or UTC proof.",
+        "port": "COM8",
+        "baud": 115200,
+        "hardware_accessed": true,
+        "serial_writes_performed": false,
+        "capture_error": null
+      }
+    },
+    "storage": {
+      "before_status": "FAILED",
+      "initial_failed_windows": 2,
+      "recovery": {
+        "blocked_retry_attempt": 2,
+        "blocked_retry_error": "NotADirectoryError: [Errno 20] Not a directory: '/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/results/urx2_storage_failure_20261101_01/events/event_0001_attempt_02'",
+        "capture_restarted": false,
+        "device_fault_preserved": true,
+        "full_status_fault_window": true,
+        "initial_failed_windows": 2,
+        "recovered_attempt": 3,
+        "recovery_used_production_function": "retry_saved_session",
+        "saved_windows": 2,
+        "source_hashes": {
+          "events.jsonl": "5e1881592c7f2fb3123859789bc72c62798d74b3b14593345fee83fced420606",
+          "frame_index.bin": "260c834dcfafaa1413f6c36ae37985b82a91cc359587e1c540e2ecd6c8c0bdf2",
+          "frames.jsonl": "1f9362a2f9261dc854bdb0740649c436b91c4766ea76cfe101613373c803da9e",
+          "issues.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "profile.json": "0435202a387a9f6c2350fffdecad7c58e32aab3f15b9dab0bc4decf0b9ef35dc",
+          "provenance.json": "90eebedd168c064adc9608a16004e3eaa61ab629bba638caed034b504ab69907",
+          "raw.bin": "3d3a2abe2b42e1ad12f3695faca1ab940a8fef827826096421bb6bc33254e5fb",
+          "timestamps.bin": "aad98e3a8fc508ef7d007cc7b699a24abc9be21907afd65355c21dce0cc20df5"
+        },
+        "source_hashes_unchanged": true,
+        "status": "RECOVERED_AND_READBACK_VERIFIED"
+      },
+      "after_verification": {
+        "status": "VERIFIED",
+        "frames": 200,
+        "hardware_accessed": false,
+        "logical_events_match": true,
+        "event_replay_note": "Rules replayed from raw bytes and timestamp index",
+        "note": "File verification/replay; no new physical acquisition"
+      },
+      "raw_matches_pc": true,
+      "full_frames": 200,
+      "device_fault_preserved": true
+    },
+    "artifact": "deliverables\\URX2_过载与保存恢复_实测_20261101.html",
+    "artifact_sha256": "38d36f55ce09a04786669c5a99634221b30cd0a6e6b7a13f78a3db8834c4ea42"
+  },
+  "browser": {
+    "status": "PASS",
+    "overload_capture_failure_visible": true,
+    "save_failure_visible": true,
+    "retry_failure_visible": true,
+    "recovery_saved_two_windows": true,
+    "device_fault_preserved": true,
+    "new_session_code_loaded_in_notebook": true,
+    "actual_board_record_opened": true,
+    "notebook_timer_stopped": true,
+    "page_errors": []
+  },
+  "final_board_state": {
+    "board_tests_passed": true,
+    "provenance": {
+      "abi": 131072,
+      "bit_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+      "capabilities": 1023,
+      "clock_hz": 100000000,
+      "config_sha256": null,
+      "detection_source": "software",
+      "hwh_sha256": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
+      "overlay_id": 844649045,
+      "pin": "PMODA1/Y18",
+      "receive_only": true,
+      "reprogrammed": false,
+      "timestamp_source": "URX2_100MHz_relative_hardware_counter",
+      "uart_sync_policy": "free_running_capture_gate"
+    },
+    "registers": {
+      "abi": 131072,
+      "baud": 115200,
+      "capabilities": 1023,
+      "clock_hz": 100000000,
+      "configuration": 3,
+      "consumed": 6178,
+      "control": 0,
+      "detector_enabled": 0,
+      "divisor": 868,
+      "event_consumed": 0,
+      "event_entries": 64,
+      "event_level": 0,
+      "event_overflows": 0,
+      "event_received": 0,
+      "fifo_entries": 4096,
+      "framing_errors": 0,
+      "hardware_active": 0,
+      "hardware_crc_errors": 0,
+      "hardware_discarded": 0,
+      "hardware_duplicates": 0,
+      "hardware_frames": 0,
+      "hardware_missing": 0,
+      "hardware_restarts": 0,
+      "hardware_semantic_errors": 0,
+      "host_pending_events": 0,
+      "level": 0,
+      "overflows": 0,
+      "parser_buffered": 0,
+      "parser_overflows": 0,
+      "received": 6178,
+      "session": 8,
+      "status": 2
+    },
+    "session_sha256": "90f27e49d7164367df1c6491f0ceb92121f4afe5a43efbe3868e301aa22dd10b",
+    "status": "STOPPED"
+  },
+  "host_tests": 79,
+  "board_tests": 34,
+  "source_hashes": {
+    "scripts\\uart_monitor\\session.py": "90f27e49d7164367df1c6491f0ceb92121f4afe5a43efbe3868e301aa22dd10b",
+    "tests\\test_uart_monitor.py": "de382d6ae3a240e5f2ddb3f84599bae8618f36ef5b164526e0e82d313634ad8e"
+  },
+  "all_acquisition_processes_exited_successfully": true,
+  "hardware_bit_changed": false,
+  "car_firmware_or_parameters_changed": false,
+  "source_fault_is_synthetic": true,
+  "storage_failure_injection": "Actual ENOTDIR from a regular marker file occupying only the isolated test events path; no mock, no disk exhaustion or remount",
+  "limitations": [
+    "Window export path failure and retry verified; not SD damage, disk-full, raw-stream media failure or power-loss during saving.",
+    "Overload is an expected failed acquisition; missing input was not repaired or fabricated.",
+    "Remaining: complete board power-cycle recovery and final version freeze."
+  ]
+}

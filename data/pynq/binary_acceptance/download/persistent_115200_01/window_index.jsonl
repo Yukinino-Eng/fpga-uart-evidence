@@ -1,0 +1,3 @@
+{"event_id": 1, "path": "events/event_0001_attempt_01", "readback_verified": true, "state": "SAVED"}
+{"event_id": 2, "path": "events/event_0002_attempt_01", "readback_verified": true, "state": "SAVED"}
+{"event_id": 3, "path": "events/event_0003_attempt_01", "readback_verified": true, "state": "SAVED"}

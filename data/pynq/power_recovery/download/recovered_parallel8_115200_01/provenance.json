@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-20T23:18:49.524489+00:00",
+  "hardware_accessed": true,
+  "software_files": {
+    "__init__.py": "54d20dd64b12dc20d81d26a9ad6c48cf959414f24b2e037a608cf8964031dea9",
+    "archive.py": "9b1dfdeb2bd395f6fd25e26066e0ba4dd7dc999e424a4cd690577f4f45bc9126",
+    "behavior.py": "c2cf35cae3896d28f0bfc0610f5cba51823023792ee0e30b955f42b04cd6f729",
+    "buffered.py": "0577cbe1ce006cf470e562057107c324efe574cd2ce0a029b82427a3296bcd01",
+    "decoder.py": "9a573ed493bff3197785582cd11b6f2f1c1c0314dc143e715b6cd1cc098ff5d7",
+    "hardware.py": "10ada38ef05924729f230c8347d6188f5bd1d5d2d4846476266f6bcd478e0622",
+    "profile.py": "0fb29177697fbfcf4bfa4406d4f0f9bab18d6f3a7f0b241849d2440cf0e50596",
+    "rules.py": "e2d525e8376b81afc744053e38b9bbbb666bb750260b33f95621e4f7600d4985",
+    "session.py": "90f27e49d7164367df1c6491f0ceb92121f4afe5a43efbe3868e301aa22dd10b",
+    "transport.py": "8f77d36653e848bff16f0a3984c79bccb81f9b7a7a82eca91865fe1cc5968a08",
+    "ui.py": "8c74624af9b6e21442265a7e9bf17f4d8841e9c33ae2c4b9523e127e303ee8bf",
+    "urx2.py": "4a46e13add0226323e8f059f4c3cf25fd344613cb533638e9e9e1f199cca833b",
+    "viewer.py": "715e5780da7d78d381d4a8ff14cfeb5a82ab4745e4bf367d7f8d617313499617"
+  },
+  "transport": {
+    "abi": 131072,
+    "bit_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+    "capabilities": 1023,
+    "clock_hz": 100000000,
+    "config_sha256": "e42e9a677f5669cfe96b02eb1da9d689d52da99f39e1ab08b4c0f58dbb8289fd",
+    "detection_source": "fpga",
+    "hwh_sha256": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
+    "overlay_id": 844649045,
+    "pin": "PMODA1/Y18",
+    "receive_buffer_chunk_bytes": 256,
+    "receive_buffer_chunks": 1024,
+    "receive_only": true,
+    "reprogrammed": false,
+    "timestamp_source": "URX2_100MHz_relative_hardware_counter",
+    "uart_sync_policy": "free_running_capture_gate"
+  },
+  "utc_source": "host_clock_not_independently_verified"
+}

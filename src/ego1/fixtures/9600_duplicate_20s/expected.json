@@ -1,0 +1,51 @@
+{
+  "case": "duplicate",
+  "baud": 9600,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 10417,
+  "schedule_count": 200,
+  "raw_bytes": 9600,
+  "stream_sha256": "d544e0be16a5a2086783cc498761abb19247301414614c40e16a2c3e4f5fe4cc",
+  "parser": {
+    "bytes_seen": 9600,
+    "frames": 200,
+    "discarded_bytes": 0,
+    "interframe_discarded_bytes": 0,
+    "header_errors": 0,
+    "crc_errors": 0,
+    "semantic_errors": 0,
+    "sequence_missing": 0,
+    "duplicates": 1,
+    "restart_or_out_of_order": 0,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": false,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {},
+  "hardware_covered_event_counts": {
+    "protocol:duplicates": 1
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "protocol:duplicates",
+      "category": "protocol",
+      "trigger_ticks": 604995045,
+      "evidence": {
+        "kind": "duplicates",
+        "ticks": 604995045,
+        "raw_offset": 2880
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA 选题与范围规划"
+  short_description: "从用户任务、现有证据与工期约束确定项目价值、范围和验证路线"
+  default_prompt: "请使用 $fpga-project-plan 评估当前选题与项目范围，给出取舍依据、最小闭环和可执行的验证顺序。"

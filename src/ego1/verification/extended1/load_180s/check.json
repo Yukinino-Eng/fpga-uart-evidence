@@ -1,0 +1,8 @@
+{
+  "status": "PASS_EXACT_BYTES",
+  "received_bytes": 432000,
+  "timing": "PASS_FRAME_START_SCHEDULE",
+  "hardware_accessed_by_this_tool": false,
+  "max_deviation_cycles": 0,
+  "aligned_initial_latency_cycles": 965600
+}

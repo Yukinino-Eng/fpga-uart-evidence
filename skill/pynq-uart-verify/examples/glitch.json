@@ -1,0 +1,10 @@
+{
+  "observed": {
+    "assessment": {"capture_integrity": "PASS", "protocol_integrity": "PASS", "device_health": "PASS"},
+    "frames": 200,
+    "device_events": 0,
+    "saved_windows": 2,
+    "complete_device_windows": 0
+  },
+  "replay": {"status": "VERIFIED", "logical_events_match": true}
+}

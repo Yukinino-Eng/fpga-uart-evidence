@@ -1,0 +1,202 @@
+{
+  "status": "PASS_ORDERLY_POWER_CYCLE_MANUAL_RECOVERY",
+  "client_date": "2026-11-01",
+  "hardware_accessed": true,
+  "orderly_shutdown_console_confirmed": true,
+  "user_confirmed_physical_power_off_on": true,
+  "before_boot_id": "94a52731-3473-4170-81fd-45c88a1ff22e",
+  "after_boot_id": "bdc830fa-3c7f-4bec-b0e3-964f9e7ed677",
+  "original_files_unchanged": 1228,
+  "notebook_sources_unchanged": 1,
+  "temporary_network_alias_restored_manually": true,
+  "notebook_9090_service_started_on_boot": true,
+  "default_overlay_before_manual_restore": "/opt/python3.6/lib/python3.6/site-packages/pynq/overlays/base/base.bit",
+  "explicit_manual_firmware_load": true,
+  "firmware_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+  "hwh_sha256": "f6f7ab1713720150fc2dccd42cfc31d2c9fdb47c84bec42999d50f3172421edf",
+  "historical_notebook_view": {
+    "status": "PASS",
+    "setup": {
+      "uid": 0,
+      "profiles": [
+        [
+          "平衡小车 · CAR-TLM1",
+          "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/profiles/car_tlm1.json"
+        ],
+        [
+          "平衡小车 · 倾角异常演示",
+          "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/profiles/car_tlm1_tilt_demo.json"
+        ],
+        [
+          "EGo1合成二进制 · 普通故障验证",
+          "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/profiles/ego1_faults.json"
+        ],
+        [
+          "EGo1合成二进制 · 八路并行验证",
+          "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/profiles/ego1_parallel8.json"
+        ],
+        [
+          "实验数据源 · LAB ASCII",
+          "/home/xilinx/jupyter_notebooks/URX2_20261101_startup2_01/profiles/lab_ascii_v1.json"
+        ]
+      ],
+      "historical_record_opened": "ego1_car_tlm1_synthetic_parallel8_d23d9f3d0272",
+      "historical_frames": 200,
+      "historical_windows": 18
+    },
+    "page_errors": []
+  },
+  "new_physical_capture": {
+    "status": "PASS_PHYSICAL_BYTES_RULES_WINDOWS_AND_PC_REPLAY",
+    "case": "recovered_parallel8_115200_01",
+    "scenario": "parallel8",
+    "baud": 115200,
+    "firmware_sha256": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",
+    "same_bit_no_reprogramming": true,
+    "frames": 200,
+    "raw_bytes": 9600,
+    "raw_sha256": "103282f4441f277257ec4810636b35a5da73ab8c79ea28b2696bc9f5ce7e7a2c",
+    "raw_exact_reference": true,
+    "independent_replay": {
+      "status": "VERIFIED",
+      "frames": 200,
+      "hardware_accessed": false,
+      "logical_events_match": true,
+      "event_replay_note": "Rules replayed from raw bytes and timestamp index",
+      "note": "File verification/replay; no new physical acquisition"
+    },
+    "device_events": {
+      "parallel_0": 2,
+      "parallel_1": 2,
+      "parallel_2": 2,
+      "parallel_3": 2,
+      "parallel_4": 2,
+      "parallel_5": 2,
+      "parallel_6": 2,
+      "parallel_7": 2
+    },
+    "hardware_batch_sizes": [
+      8,
+      8
+    ],
+    "complete_device_windows": 16,
+    "outside_stream_timeouts": [
+      {
+        "category": "protocol",
+        "event_id": 1,
+        "evidence": {
+          "deadline_ticks": 14457344479,
+          "last_valid_ticks": 14432344479
+        },
+        "hardware_batch_id": 1,
+        "rule_id": "valid_frame_timeout",
+        "source": "fpga",
+        "trigger_ticks": 14457344479
+      },
+      {
+        "category": "protocol",
+        "event_id": 18,
+        "evidence": {
+          "deadline_ticks": 25040605337,
+          "last_valid_ticks": 25015605337
+        },
+        "hardware_batch_id": 4,
+        "rule_id": "valid_frame_timeout",
+        "source": "fpga",
+        "trigger_ticks": 25040605337
+      }
+    ],
+    "hardware_registers": {
+      "abi": 131072,
+      "baud": 115200,
+      "capabilities": 1023,
+      "clock_hz": 100000000,
+      "configuration": 3,
+      "consumed": 9600,
+      "control": 0,
+      "detector_enabled": 1,
+      "divisor": 868,
+      "event_consumed": 4,
+      "event_entries": 64,
+      "event_level": 0,
+      "event_overflows": 0,
+      "event_received": 4,
+      "fifo_entries": 4096,
+      "framing_errors": 0,
+      "hardware_active": 0,
+      "hardware_crc_errors": 0,
+      "hardware_discarded": 0,
+      "hardware_duplicates": 0,
+      "hardware_frames": 200,
+      "hardware_missing": 0,
+      "hardware_restarts": 0,
+      "hardware_semantic_errors": 0,
+      "host_buffer_capacity": 1024,
+      "host_buffer_error": null,
+      "host_buffer_high_water": 93,
+      "host_pending_events": 0,
+      "level": 0,
+      "overflows": 0,
+      "parser_buffered": 0,
+      "parser_overflows": 0,
+      "received": 9600,
+      "session": 1,
+      "status": 2
+    },
+    "browser_samples": 134,
+    "browser_max_visible_windows": 18,
+    "browser_max_frames": 200,
+    "browser_live_matching_samples": 36,
+    "browser_live_max_windows": 17,
+    "browser_live_max_frames": 200,
+    "browser_payload_errors": [],
+    "artifact": "C:\\Users\\16501\\Documents\\FPGA_competition\\build\\uart_power_recovery_20261101_01\\recovered_parallel8_115200_01_view.html"
+  },
+  "final_registers": {
+    "control": 0,
+    "status": 2,
+    "level": 0,
+    "received": 9600,
+    "consumed": 9600,
+    "overflows": 0,
+    "framing_errors": 0,
+    "clock_hz": 100000000,
+    "baud": 115200,
+    "fifo_entries": 4096,
+    "session": 1,
+    "abi": 131072,
+    "capabilities": 1023,
+    "divisor": 868,
+    "event_level": 0,
+    "event_overflows": 0,
+    "event_received": 4,
+    "event_consumed": 4,
+    "hardware_frames": 200,
+    "hardware_crc_errors": 0,
+    "hardware_semantic_errors": 0,
+    "parser_overflows": 0,
+    "parser_buffered": 0,
+    "hardware_active": 0,
+    "hardware_missing": 0,
+    "hardware_duplicates": 0,
+    "hardware_restarts": 0,
+    "hardware_discarded": 0,
+    "event_entries": 64,
+    "configuration": 3,
+    "detector_enabled": 1,
+    "host_pending_events": 0
+  },
+  "acquisition_stopped": true,
+  "fifos_empty": true,
+  "browser_closed": true,
+  "notebook_refresh_timer_stopped": true,
+  "artifact": "deliverables\\URX2_断电恢复后八路取证_实测_20261101.html",
+  "artifact_sha256": "0aaeeef8ad3de60e7497ef926d4749af6ade403ce03f6233bd3ac8021d280c96",
+  "scope": "One orderly shutdown and physical power cycle, manual networking/PL recovery and a new physical EGo1 acquisition",
+  "limitations": [
+    "Not abrupt power loss during writing",
+    "Not automatic capture resumption",
+    "Not SD-card fault tolerance or repeated cold-boot reliability",
+    "Initial PC console logger encountered a GBK encoding exception; only partial boot log retained; boot ID and post-boot checks independently confirm reboot"
+  ]
+}

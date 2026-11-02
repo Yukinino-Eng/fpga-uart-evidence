@@ -1,0 +1,20 @@
+{
+  "source": "PHYSICAL_EGo1_USB_RX",
+  "port": "COM3",
+  "baud": 9600,
+  "vid": 1027,
+  "pid": 24592,
+  "serial": "1234",
+  "jtag_identified_part": "xc7a35t",
+  "hardware_accessed": true,
+  "uart_bytes_written": 0,
+  "timestamp_basis": "PC read completion; not PYNQ hardware time",
+  "status": "PASS_EXACT_BOARD_BYTES",
+  "received_bytes": 9600,
+  "expected_bytes": 9600,
+  "sha256": "61c2faa850da21a7bf3e7c2e727380ec81e0a85cd723e1d506c68175e3f6f2ae",
+  "matched": true,
+  "first_byte_seconds": 62.49910640000007,
+  "board_to_pynq_tested": false,
+  "frame_schedule": "NOT_MEASURED_BY_PC_READ_TIMESTAMPS"
+}

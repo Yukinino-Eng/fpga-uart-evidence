@@ -1,0 +1,33 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 399925237728,
+  "capture_start_ticks": 399400168333,
+  "covered_end_ticks": 399925168333,
+  "covered_start_ticks": 399400168333,
+  "desired_end_ticks": 399925168333,
+  "desired_start_ticks": 398925168333,
+  "files": {
+    "frames.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamps.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "frame_count": 0,
+  "frames_end": 0,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": true,
+  "raw_end": 0,
+  "raw_entries": 0,
+  "raw_start": 0,
+  "trigger": {
+    "category": "protocol",
+    "event_id": 1,
+    "evidence": {
+      "deadline_ticks": 399425168333,
+      "last_valid_ticks": 399400168333
+    },
+    "rule_id": "valid_frame_timeout",
+    "trigger_ticks": 399425168333
+  }
+}

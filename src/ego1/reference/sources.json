@@ -1,0 +1,20 @@
+{
+  "client_date": "2026-10-29",
+  "board": "EGo1 v2.2",
+  "manual": "https://e-elements.readthedocs.io/zh/ego1_v2.2/EGo1.html",
+  "image_source": "https://e-elements.readthedocs.io/zh/ego1_v2.2/_images/35.jpg",
+  "image_sha256": "b15dbecbbba777018a686c5567ab48d7b57cfa34c96d2307c065d1e468598ac2",
+  "selected_tx": {
+    "connector": "J5",
+    "physical_pin": 15,
+    "fpga_pin": "B11"
+  },
+  "ground_pins": [
+    33,
+    34
+  ],
+  "power_pins_do_not_connect": [
+    35,
+    36
+  ]
+}

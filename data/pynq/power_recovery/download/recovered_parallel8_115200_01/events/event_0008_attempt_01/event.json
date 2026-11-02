@@ -1,0 +1,38 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 25603995217,
+  "capture_start_ticks": 14432344479,
+  "covered_end_ticks": 24125613057,
+  "covered_start_ticks": 23125613057,
+  "desired_end_ticks": 24125613057,
+  "desired_start_ticks": 23125613057,
+  "files": {
+    "frames.jsonl": "ab66c5bec0752efaa24e44a4a9ad8371f764cd5163a1a3a50a6c26099337852a",
+    "raw.bin": "838db9e84d0e4a0ca7dce532af7b054cf9f99e86c235614e2e2edb86691c2a2a",
+    "timestamps.bin": "403d3ae01aba933bae3ed6c1f61beee68bcee722923a0d454167db89b9c72319"
+  },
+  "frame_count": 200,
+  "frames_end": 248785,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 5328,
+  "raw_entries": 9600,
+  "raw_start": 527,
+  "trigger": {
+    "category": "device",
+    "event_id": 8,
+    "evidence": {
+      "field": "fault_code",
+      "raw_end": 2928,
+      "raw_start": 2880,
+      "raw_value": 20,
+      "value": 20
+    },
+    "hardware_batch_id": 2,
+    "rule_id": "parallel_6",
+    "source": "fpga",
+    "trigger_ticks": 23625613057
+  }
+}

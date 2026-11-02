@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "description": "Development defaults. Validate thresholds and normal coverage before application claims. Control-active is an observed flag, not proof of physical balance.",
+  "modes": [
+    {"id": "stopped", "when": {"field": "flags", "mask": 4, "equals": 0}},
+    {"id": "control_active", "when": {"field": "flags", "mask": 4, "equals": 4}}
+  ],
+  "freshness": [
+    {
+      "id": "imu_progress",
+      "field": "imu_sample_count",
+      "bits": 32,
+      "max_stale_ms": 100,
+      "valid_fields": ["pitch_mdeg", "rate_mdps"]
+    }
+  ],
+  "baseline": {
+    "window_ms": 1000,
+    "step_ms": 200,
+    "min_samples": 40,
+    "max_samples": 4096,
+    "min_training_windows": 20,
+    "min_training_seconds": 5,
+    "mad_multiplier": 6,
+    "features": [
+      {"id": "pitch_level", "field": "pitch_mdeg", "stat": "median", "margin_floor": 1.0, "direction": "both", "duration_ms": 400, "modes": ["control_active"]},
+      {"id": "pitch_variation", "field": "pitch_mdeg", "stat": "iqr", "margin_floor": 0.3, "direction": "upper", "duration_ms": 400, "modes": ["control_active"]},
+      {"id": "rate_activity", "field": "rate_mdps", "stat": "p90_abs", "margin_floor": 5.0, "direction": "upper", "duration_ms": 400, "modes": ["control_active"]}
+    ]
+  }
+}

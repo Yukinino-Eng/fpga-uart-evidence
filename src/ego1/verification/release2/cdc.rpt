@@ -1,0 +1,33 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct 31 20:08:13 2026
+| Host         : USER-20260305KE running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -file D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/release2/cdc.rpt
+| Design       : ego1_urx2_source_top
+| Device       : 7a35t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  -------------------------------------------------------
+CDC-3  Info          6  1-bit synchronized with ASYNC_REG property
+CDC-9  Info          1  Asynchronous reset synchronized with ASYNC_REG property
+
+Source Clock: input port clock
+Destination Clock: sys_clk
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  --------------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  fpga_reset     reset_sync_reg[0]/CLR
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  switches[0]    sw_meta_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  switches[1]    sw_meta_reg[1]/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  switches[2]    sw_meta_reg[2]/D
+  5  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  switches[3]    sw_meta_reg[3]/D
+  6  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  switches[4]    sw_meta_reg[4]/D
+  7  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  button_s0      u_button/button_meta_reg/D
+

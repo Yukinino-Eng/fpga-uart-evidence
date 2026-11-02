@@ -1,0 +1,55 @@
+{
+  "case": "persistent",
+  "baud": 115200,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 868,
+  "schedule_count": 200,
+  "raw_bytes": 9600,
+  "stream_sha256": "915f464cf9fc48a6356fe6b34667f3e3d6abaf412f45a4f8ab67fbfc4c7b8851",
+  "parser": {
+    "bytes_seen": 9600,
+    "frames": 200,
+    "discarded_bytes": 0,
+    "interframe_discarded_bytes": 0,
+    "header_errors": 0,
+    "crc_errors": 0,
+    "semantic_errors": 0,
+    "sequence_missing": 0,
+    "duplicates": 0,
+    "restart_or_out_of_order": 0,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": true,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {
+    "pitch_limit": 1
+  },
+  "hardware_covered_event_counts": {
+    "pitch_limit": 1
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "pitch_limit",
+      "category": "device",
+      "trigger_ticks": 610416300,
+      "evidence": {
+        "field": "pitch_mdeg",
+        "value": 20.0,
+        "raw_value": 20000,
+        "raw_start": 2928,
+        "raw_end": 2976
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

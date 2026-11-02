@@ -1,0 +1,38 @@
+{
+  "attempt": 1,
+  "available_end_ticks": 866925908355,
+  "capture_start_ticks": 863962630688,
+  "covered_end_ticks": 866923318173,
+  "covered_start_ticks": 865923318173,
+  "desired_end_ticks": 866923318173,
+  "desired_start_ticks": 865923318173,
+  "files": {
+    "frames.jsonl": "be9d2bc35f02b06c7d7dc4c7c92de4ff9ef137c228ee791005dbee3a5cf51e99",
+    "raw.bin": "c75dfb469ef4de8efa55d6387d77fcc3f2c3f8e7f506b4617fdde2bee0ddf3d5",
+    "timestamps.bin": "ac70757bf27d7c1de847f433a5e5b9ee28a7719213f7b6398a19fd757055d021"
+  },
+  "frame_count": 113,
+  "frames_end": 140078,
+  "note": "Raw bytes follow hardware time; whole decoded frames can overlap window edges.",
+  "post_clipped": false,
+  "pre_cache_clipped": false,
+  "pre_clipped": false,
+  "raw_end": 5424,
+  "raw_entries": 5424,
+  "raw_start": 623,
+  "trigger": {
+    "category": "device",
+    "event_id": 2,
+    "evidence": {
+      "field": "pitch_mdeg",
+      "raw_end": 3024,
+      "raw_start": 2976,
+      "raw_value": 20000,
+      "value": 20.0
+    },
+    "hardware_batch_id": 2,
+    "rule_id": "pitch_limit",
+    "source": "fpga",
+    "trigger_ticks": 866423318173
+  }
+}

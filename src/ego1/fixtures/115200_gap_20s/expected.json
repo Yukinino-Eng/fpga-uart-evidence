@@ -1,0 +1,63 @@
+{
+  "case": "gap",
+  "baud": 115200,
+  "fps": 10,
+  "seconds": 20,
+  "clock_hz": 100000000,
+  "clocks_per_bit": 868,
+  "schedule_count": 194,
+  "raw_bytes": 9312,
+  "stream_sha256": "039517e0354d176bdf9dd74b55accba4e23cf2a561fd99dd9c27974056b05e37",
+  "parser": {
+    "bytes_seen": 9312,
+    "frames": 194,
+    "discarded_bytes": 0,
+    "interframe_discarded_bytes": 0,
+    "header_errors": 0,
+    "crc_errors": 0,
+    "semantic_errors": 0,
+    "sequence_missing": 6,
+    "duplicates": 0,
+    "restart_or_out_of_order": 0,
+    "imu_invalid_frames": 0,
+    "max_imu_age_ms": 4,
+    "max_car_tx_skipped": 0,
+    "trailing_partial_bytes": 0,
+    "transport_integrity_observed": false,
+    "checksum_available": true,
+    "sequence_available": true
+  },
+  "device_event_counts": {},
+  "hardware_covered_event_counts": {
+    "protocol:sequence_missing": 1,
+    "valid_frame_timeout": 1
+  },
+  "events": [
+    {
+      "event_id": 1,
+      "rule_id": "protocol:sequence_missing",
+      "category": "protocol",
+      "trigger_ticks": 660416300,
+      "evidence": {
+        "kind": "sequence_missing",
+        "ticks": 660416300,
+        "raw_offset": 2880,
+        "count": 6
+      }
+    },
+    {
+      "event_id": 2,
+      "rule_id": "valid_frame_timeout",
+      "category": "protocol",
+      "trigger_ticks": 615416300,
+      "evidence": {
+        "last_valid_ticks": 590416300,
+        "deadline_ticks": 615416300
+      }
+    }
+  ],
+  "phase": "First test frame through declared source duration; excludes startup/stop silence",
+  "time_origin": "Synthetic reference timeline; not UTC or captured FPGA timestamps",
+  "interbyte_cycles_model": 2,
+  "hardware_accessed": false
+}

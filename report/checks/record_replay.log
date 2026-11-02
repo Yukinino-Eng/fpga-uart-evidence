@@ -1,0 +1,19 @@
+VERIFIED data/pynq/binary_acceptance/download/glitch_115200_01 frames=200
+VERIFIED data/pynq/binary_acceptance/download/parallel8_115200_01 frames=0
+VERIFIED data/pynq/binary_acceptance/download/parallel8_115200_02 frames=200
+VERIFIED data/pynq/binary_acceptance/download/parallel8_9600_01 frames=200
+VERIFIED data/pynq/binary_acceptance/download/persistent_115200_01 frames=200
+VERIFIED data/pynq/car_live/download/car_tlm1_d60f57601be9 frames=15028
+VERIFIED data/pynq/failure_recovery/download_after/urx2_physical_overload_20261101_01 frames=172
+VERIFIED data/pynq/failure_recovery/download_after/urx2_storage_failure_20261101_01 frames=200
+VERIFIED data/pynq/failure_recovery/download_before/urx2_physical_overload_20261101_01 frames=172
+VERIFIED data/pynq/failure_recovery/download_before/urx2_storage_failure_20261101_01 frames=200
+VERIFIED data/pynq/power_recovery/download/recovered_parallel8_115200_01 frames=200
+VERIFIED data/pynq/text_acceptance/download/urx2_lab_normal_115200_20261101_01 frames=600
+VERIFIED data/pynq/text_acceptance/download/urx2_lab_normal_9600_20261101_01 frames=600
+{
+  "status": "PASS",
+  "records": 13,
+  "hardware_accessed": false,
+  "frames": 17972
+}

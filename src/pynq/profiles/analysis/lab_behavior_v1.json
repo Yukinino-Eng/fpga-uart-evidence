@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "description": "Synthetic LAB protocol example, not a real temperature device validation.",
+  "modes": [{"id": "normal"}],
+  "baseline": {
+    "window_ms": 1000,
+    "step_ms": 200,
+    "min_samples": 8,
+    "min_training_windows": 20,
+    "min_training_seconds": 5,
+    "features": [
+      {"id": "temperature_level", "field": "temperature_mdeg", "stat": "median", "margin_floor": 1.0, "direction": "both", "duration_ms": 400}
+    ]
+  }
+}

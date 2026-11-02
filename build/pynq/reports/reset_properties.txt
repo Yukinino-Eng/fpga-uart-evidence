@@ -1,0 +1,22 @@
+Property                           Type     Read-only  Value
+ALLOWED_SIM_MODELS                 string*  true       rtl
+CLASS                              string   true       bd_cell
+CONFIG.C_AUX_RESET_HIGH            string   false      0
+CONFIG.C_AUX_RST_WIDTH             string   false      4
+CONFIG.C_EXT_RESET_HIGH            string   true       0
+CONFIG.C_EXT_RST_WIDTH             string   false      4
+CONFIG.C_NUM_BUS_RST               string   false      1
+CONFIG.C_NUM_INTERCONNECT_ARESETN  string   false      1
+CONFIG.C_NUM_PERP_ARESETN          string   false      1
+CONFIG.C_NUM_PERP_RST              string   false      1
+CONFIG.Component_Name              string   true       system_reset_0
+CONFIG.RESET_BOARD_INTERFACE       string   false      Custom
+CONFIG.USE_BOARD_FLOW              string   false      false
+LOCATION                           string   false      
+LOCK_UPGRADE                       bool     false      0
+NAME                               string   false      reset
+PATH                               string   true       /reset
+SCREENSIZE                         string   false      
+SELECTED_SIM_MODEL                 enum     false      rtl
+TYPE                               string   true       ip
+VLNV                               string   true       xilinx.com:ip:proc_sys_reset:5.0

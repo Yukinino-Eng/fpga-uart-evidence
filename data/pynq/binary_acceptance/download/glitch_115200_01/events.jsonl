@@ -1,0 +1,2 @@
+{"category": "protocol", "event_id": 1, "evidence": {"deadline_ticks": 870063364833, "last_valid_ticks": 870038364833}, "hardware_batch_id": 1, "rule_id": "valid_frame_timeout", "source": "fpga", "trigger_ticks": 870063364833}
+{"category": "protocol", "event_id": 2, "evidence": {"deadline_ticks": 874087350840, "last_valid_ticks": 874062350840}, "hardware_batch_id": 2, "rule_id": "valid_frame_timeout", "source": "fpga", "trigger_ticks": 874087350840}

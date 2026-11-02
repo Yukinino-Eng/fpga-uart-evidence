@@ -1,0 +1,1 @@
+{"category": "protocol", "event_id": 1, "evidence": {"deadline_ticks": 382316997528, "last_valid_ticks": 382291997528}, "rule_id": "valid_frame_timeout", "trigger_ticks": 382316997528}

@@ -1,0 +1,11 @@
+{
+  "observed": {
+    "assessment": {"capture_integrity": "UNKNOWN", "protocol_integrity": "UNKNOWN", "device_health": "PASS"},
+    "frames": 20,
+    "checksum_available": false,
+    "sequence_available": false,
+    "device_events": 0,
+    "saved_windows": 0
+  },
+  "replay": {"status": "VERIFIED", "logical_events_match": true}
+}

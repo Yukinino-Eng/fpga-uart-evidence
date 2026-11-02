@@ -1,0 +1,93 @@
+{
+  "profile_version": 1,
+  "id": "lab_ascii_v1",
+  "description": "PC-generated experimental source; not another real device",
+  "transport": {
+    "baud": 9600,
+    "format": "8N1"
+  },
+  "framing": {
+    "kind": "text",
+    "prefix": "@LAB,",
+    "separator": ",",
+    "max_length": 512
+  },
+  "checksum": {
+    "kind": "xor8",
+    "start": 1,
+    "delimiter": "*"
+  },
+  "fields": [
+    {
+      "name": "sequence",
+      "column": 1,
+      "type": "u32"
+    },
+    {
+      "name": "uptime_ms",
+      "column": 2,
+      "type": "u32"
+    },
+    {
+      "name": "temperature_mdeg",
+      "column": 3,
+      "type": "i32",
+      "scale": 0.001,
+      "unit": "degC"
+    },
+    {
+      "name": "voltage_mv",
+      "column": 4,
+      "type": "u32",
+      "scale": 0.001,
+      "unit": "V"
+    },
+    {
+      "name": "status",
+      "column": 5,
+      "type": "u16"
+    }
+  ],
+  "sequence": {
+    "field": "sequence",
+    "bits": 32,
+    "time_field": "uptime_ms",
+    "time_bits": 32
+  },
+  "rules": [
+    {
+      "id": "temperature_limit",
+      "kind": "range",
+      "field": "temperature_mdeg",
+      "min": 0,
+      "max": 60,
+      "duration_ms": 100
+    },
+    {
+      "id": "status_fault",
+      "kind": "bits",
+      "field": "status",
+      "mask": 1,
+      "equals": 1,
+      "duration_ms": 0
+    }
+  ],
+  "timing": {
+    "valid_frame_timeout_ms": 250
+  },
+  "evidence": {
+    "pre_seconds": 5,
+    "post_seconds": 5
+  },
+  "display": {
+    "name": "实验数据源 · LAB ASCII",
+    "default_field": "temperature_mdeg",
+    "fields": {
+      "sequence": "帧序号",
+      "uptime_ms": "设备运行时间",
+      "temperature_mdeg": "温度",
+      "voltage_mv": "电源电压",
+      "status": "状态位"
+    }
+  }
+}

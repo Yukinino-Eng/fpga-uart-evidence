@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 31 20:11:50 2026
+# Process ID         : 22132
+# Current directory  : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/build/extended1
+# Command line       : xsim.exe -log D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/wave_9600/runtime.log -mode tcl -source {xsim.dir/wave_9600/xsim_script.tcl}
+# Log file           : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/wave_9600/runtime.log
+# Journal file       : D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/build/extended1\xsim.jou
+# Running On         : USER-20260305KE
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34056 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36204 MB
+# Available Virtual  : 23384 MB
+#-----------------------------------------------------------
+source xsim.dir/wave_9600/xsim_script.tcl
+# xsim {wave_9600} -testplusarg BAUD=9600 -testplusarg CASE=0 -testplusarg SHORT=2 -testplusarg OUT=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/wave_9600 -wdb {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/wave_9600/wave.wdb} -autoloadwcfg -tclbatch {D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_wave.tcl}
+Time resolution is 1 ps
+source D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/scripts/xsim_wave.tcl
+## log_wave /tb_ego1_urx2/tx /tb_ego1_urx2/mirror /tb_ego1_urx2/leds /tb_ego1_urx2/reset_n /tb_ego1_urx2/button /tb_ego1_urx2/switches
+WARNING: [Simtcl 6-55] No matching HDL object or HDL scope found
+## run all
+OUTPUT_DIR=D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/verification/extended1/wave_9600 fd=-20000 starts=-19999
+TEST_PASS baud=9600 case=0 fps=10 clk=100000000 bytes=96
+$finish called at time : 158162555 ns : File "D:/desk/codex-fpga/signal-blackbox/ego1_urx2_sender/tb/tb_ego1_urx2.sv" Line 73
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 227.961 ; gain = 0.000
+## exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 31 20:12:01 2026...

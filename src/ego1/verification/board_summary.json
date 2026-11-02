@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "baud": 9600,
+      "frames": 200,
+      "bytes": 9600,
+      "crc_errors": 0,
+      "sequence_errors": 0,
+      "source": "PHYSICAL_EGo1_USB_RX",
+      "status": "PASS"
+    },
+    {
+      "baud": 115200,
+      "frames": 200,
+      "bytes": 9600,
+      "crc_errors": 0,
+      "sequence_errors": 0,
+      "source": "PHYSICAL_EGo1_USB_RX",
+      "status": "PASS"
+    }
+  ],
+  "pynq_tested": false
+}

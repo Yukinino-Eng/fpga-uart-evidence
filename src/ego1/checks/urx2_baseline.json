@@ -1,0 +1,35 @@
+{
+  "status": "PASS_OFFLINE_URX2_RELEASE1",
+  "implementation": {
+    "part": "xc7z020clg400-1",
+    "clock_mhz": 100,
+    "wns_ns": 0.0,
+    "whs_ns": 0.039,
+    "timing_margin": "At reported setup boundary; board testing pending",
+    "drc_errors": 0,
+    "unconstrained_internal_endpoints": 0,
+    "physical_rule_lanes": 8,
+    "lut": 15947,
+    "ff": 13871,
+    "bram36_equivalent": 22.5,
+    "dsp": 0,
+    "cdc": "One CDC-3 informational two-stage ASYNC_REG UART synchronizer",
+    "methodology_warning": "XDCB-5: existing inefficient pin query; no timing violation waived"
+  },
+  "paired_xsa_files": {
+    ".bit": {
+      "xsa_member": "uart_detector2.bit",
+      "sha256": "5bd7937d8965397b87de2bcffde3d72adae594b6272cee7bb7a6862510189a70",
+      "match": true
+    },
+    ".hwh": {
+      "xsa_member": "system.hwh",
+      "sha256": "7ab3e7e085ca19b45867b5a0e17a6bbb5ba638ec984fb2b43d2eb00009bc417b",
+      "match": true
+    }
+  },
+  "software_tests": 62,
+  "hardware_accessed": false,
+  "board_deployed": false,
+  "note": "Receiver evidence summary only; URX2 bit/runtime deployment is outside this sender package"
+}
