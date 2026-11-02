@@ -2,7 +2,7 @@
   "format": "fpga-uart-evidence-public-snapshot-v1",
   "algorithm": "SHA256",
   "files": {
-    ".gitattributes": "ddd4a37317dbd600c4a48db0c5c672f9f826a3f3afd7f261f4edd76e27fc1e9f",
+    ".gitattributes": "11af18a517256b6661d203c86bc63d704c166a7bd70b5e1d25722149af29a0c2",
     ".gitignore": "31236552e3ae884c4bdcb4a13a51a09dc4f2101cf6d049106c828207bce91add",
     "board/ego1/README.md": "ae1328ba8e42b834b4a30c0bdffff82f988c4708ea6db9b78d970b15450782ad",
     "board/pynq/firmware/uart_detector2.bit": "24870758d42c9abcbf5bf7ffc631dfbfb8de886d512fd5d10e403cfdfae4106f",

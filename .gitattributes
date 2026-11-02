@@ -1,3 +1,17 @@
 # Preserve archived evidence, firmware and source bytes across Windows/Linux clones.
 * -text
+# Keep exported evidence and reports out of GitHub language statistics.
+# The actual viewer source under src/pynq/scripts/uart_monitor remains detectable.
+report/** linguist-documentation
+report/replays/** linguist-generated
+data/** linguist-generated
+build/pynq/reports/** linguist-generated
+board/pynq/firmware/** linguist-generated
+src/ego1/firmware/** linguist-generated
+src/ego1/fixtures/** linguist-generated
+src/ego1/verification/** linguist-generated
+src/ego1/checks/** linguist-generated
 
+# Board definitions are third-party assets; XDC constraints use Tcl syntax.
+src/pynq/assets/** linguist-vendored
+*.xdc linguist-language=Tcl
