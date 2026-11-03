@@ -13,7 +13,7 @@ def files(root):
             continue
         if relative.parts[0] == 'out' or relative.parts[:3] in (('src', 'pynq', 'build'), ('src', 'ego1', 'build')):
             continue
-        if relative.parts[:3] in (('src','car','build'),('src','car','Objects'),('src','car','Listings')):
+        if relative.parts[:3] in (('src','car','build'),('src','car','Objects'),('src','car','Listings'),('src','car','DebugConfig')):
             continue
         yield p
 
