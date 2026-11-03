@@ -50,7 +50,7 @@ sudo /opt/python3.6/bin/python3.6 /home/xilinx/jupyter_notebooks/uart_evidence/s
 
 ## Windows验收启动入口
 
-完成上述部署后，双击工程根目录的`open_acceptance.cmd`。菜单1默认打开报告约定的`uart_evidence/notebooks/UART_Monitor.ipynb`，菜单2和3查看实板回放，菜单5核验导出记录。需要PowerShell 7；记录核验另需Python 3.8+。安装器同时保留原有小写Notebook入口。
+完成上述部署后，双击工程根目录的`open_acceptance.cmd`。菜单1默认打开报告约定的`uart_evidence/notebooks/uart_monitor.ipynb`，菜单2和3查看实板回放，菜单5核验导出记录。需要PowerShell 7；记录核验另需Python 3.8+。
 
 自检命令为`pwsh -File board/open_acceptance.ps1 -CheckOnly`。其他板卡地址和Notebook目录通过`-BaseUrl`与`-NotebookPath`指定，详见[验收电脑操作](board/acceptance_computer_operations.md)。
 

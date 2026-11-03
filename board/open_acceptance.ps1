@@ -3,7 +3,7 @@
 param(
     [ValidateSet('menu','live','parallel','protocol','guide','verify','power')][string]$Action='menu',
     [string]$BaseUrl='http://169.254.135.99:9090',
-    [string]$NotebookPath='uart_evidence/notebooks/UART_Monitor.ipynb',
+    [string]$NotebookPath='uart_evidence/notebooks/uart_monitor.ipynb',
     [string]$RecordPath,
     [string]$PythonExe,
     [switch]$CheckOnly

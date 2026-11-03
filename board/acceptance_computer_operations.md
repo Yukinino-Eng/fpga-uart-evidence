@@ -17,7 +17,7 @@ Windows电脑安装PowerShell 7，保留工程目录结构，双击仓库根目�
 ## 按复现步骤打开实时界面
 
 1. 按仓库README将运行目录安装至`/home/xilinx/jupyter_notebooks/uart_evidence`，配置一次固定IP。电脑有线口可使用`169.254.135.84/16`，板端使用`169.254.135.99/16`，双方地址不同，直连无需网关或DNS。
-2. 启动菜单选择1，默认打开`http://169.254.135.99:9090/notebooks/uart_evidence/notebooks/UART_Monitor.ipynb`。安装器同时提供与报告一致的大写入口和原有小写入口，Linux上两者内容相同。
+2. 启动菜单选择1，默认打开`http://169.254.135.99:9090/notebooks/uart_evidence/notebooks/uart_monitor.ipynb`。文件名为小写，和报告、安装器生成的文件保持一致。
 3. 按系统卡实际方式登录Jupyter。点击入口代码单元格，按Shift+Enter。
 4. 小车倾角演示选择“平衡小车 · 倾角异常演示”，115200，检测执行“FPGA并行规则 / URX2”。该配置检测有效倾角超出±10°并持续100毫秒；普通“平衡小车 · CAR-TLM1”用于基础遥测规则。
 5. 点击“检查配置”，再点击“加载通用接收固件”。看到接收器保持停止后，确认接线并开始监测。
@@ -30,7 +30,7 @@ Windows电脑安装PowerShell 7，保留工程目录结构，双击仓库根目�
 在工程根目录运行以下命令，分别修改实际地址和Jupyter中的相对Notebook路径：
 
 ```powershell
-pwsh -File board/open_acceptance.ps1 -Action live -BaseUrl http://192.168.2.99:9090 -NotebookPath uart_evidence/notebooks/UART_Monitor.ipynb
+pwsh -File board/open_acceptance.ps1 -Action live -BaseUrl http://192.168.2.99:9090 -NotebookPath uart_evidence/notebooks/uart_monitor.ipynb
 ```
 
 已有startup2演示目录可继续使用：
