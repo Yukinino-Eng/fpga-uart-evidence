@@ -14,7 +14,7 @@ sudo /opt/python3.6/bin/python3.6 <运行目录>/scripts/pynq_fixed_ip.py
 
 默认地址为 169.254.135.99/16；在 ifupdown 系统中增加开机别名 eth0:2，保留现有 DHCP、192.168.2.99、网关和 DNS。不重启网络，不操作 FPGA。已存在时可重复运行，冲突或不兼容系统会拒绝修改。电脑网卡应有同一网段的不同地址。撤销时运行同一命令并加 `--remove`，只移除匹配的持久配置，保留当前在线地址。
 
-本系统卡的 Notebook 端口为 9090，其他镜像使用实际端口。打开 `http://169.254.135.99:9090/tree`，进入运行目录的 `notebooks/uart_monitor.ipynb`。
+本系统卡的 Notebook 端口为 9090，其他镜像使用实际端口。打开 `http://169.254.135.99:9090/tree`，进入运行目录的 `notebooks/UART_Monitor.ipynb`。安装器同时保留原有 `notebooks/uart_monitor.ipynb`，Linux上两者内容相同。Windows电脑可使用仓库根目录的 `open_acceptance.cmd` 打开此入口。
 
 ## 加载与采集
 

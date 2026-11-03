@@ -48,6 +48,12 @@ sudo /opt/python3.6/bin/python3.6 /home/xilinx/jupyter_notebooks/uart_evidence/s
 
 电脑与板卡使用相同网段，打开 `http://169.254.135.99:9090/tree`，进入实际运行目录的 `notebooks/uart_monitor.ipynb`。运行入口，选择协议和检测方式，依次点击“检查配置 → 加载通用接收固件 → 开始监测”。已核验系统镜像支持从默认 base.bit 显式恢复；未知镜像继续拒绝。详见 [PYNQ 部署](board/pynq/README.md)。
 
+## Windows验收启动入口
+
+完成上述部署后，双击工程根目录的`open_acceptance.cmd`。菜单1默认打开报告约定的`uart_evidence/notebooks/UART_Monitor.ipynb`，菜单2和3查看实板回放，菜单5核验导出记录。需要PowerShell 7；记录核验另需Python 3.8+。安装器同时保留原有小写Notebook入口。
+
+自检命令为`pwsh -File board/open_acceptance.ps1 -CheckOnly`。其他板卡地址和Notebook目录通过`-BaseUrl`与`-NotebookPath`指定，详见[验收电脑操作](board/acceptance_computer_operations.md)。
+
 ## 重建工程
 
 FPGA 使用 Vivado 2025.2：

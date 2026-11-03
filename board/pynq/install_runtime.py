@@ -40,6 +40,12 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(str(p), str(target))
         records[relative.as_posix()] = hashlib.sha256(target.read_bytes()).hexdigest()
+    # Keep the report's case-sensitive URL and the repository's lowercase URL usable.
+    notebook = output / 'notebooks/uart_monitor.ipynb'
+    report_entry = output / 'notebooks/UART_Monitor.ipynb'
+    if not report_entry.exists():
+        shutil.copyfile(str(notebook), str(report_entry))
+    records['notebooks/UART_Monitor.ipynb'] = hashlib.sha256(report_entry.read_bytes()).hexdigest()
     (output / 'runtime_manifest.json').write_text(json.dumps(records, indent=2) + '\n', encoding='utf-8')
     print('RUNTIME_PREPARED files={} path={} hardware_accessed=false'.format(len(records), output))
 
