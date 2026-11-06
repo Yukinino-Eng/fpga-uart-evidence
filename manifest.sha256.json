@@ -910,7 +910,7 @@
     "data/pynq/text_acceptance/download/urx2_lab_normal_9600_20261101_01/window_index.jsonl": "a12ebcfc84007f5b0b6db034e4316110c99227132908030f5867855a5c1d3b68",
     "data/README.md": "464eda0566e417c301a8ac9d0bfad96ee1d6a0fd5a0a2fc502f61a4fa32a8c6e",
     "open_acceptance.cmd": "70415d75c8fe5ada6fd0641c4292307aba7c956b00346da1e1e435380f195638",
-    "README.md": "291b4992a95e2934aee31967eca40808e1be1a1d9f67c7d8ee5b6805087a803e",
+    "README.md": "0fd8d297dc978c845c4d9c263b4ea3cb921f7d53b8433e03c1531dca088ba4c0",
     "report/checks/ego1_record_recheck.json": "a09f2cacd26ba7fa73bbcb1d33cfb4556d4612bd806dd837ace75b45e7ca153a",
     "report/checks/record_replay.log": "52af6088a3baae62296086c9c2006ea8b0c3958fa260b6fa213b3e28ce537270",
     "report/checks/uart_software.log": "9a09a7ca61e573881a0244d407c6280d9d7a2067a805252f24c12988200eccd6",
@@ -1551,6 +1551,7 @@
     "src/pynq/tests/test_uart_monitor.py": "de382d6ae3a240e5f2ddb3f84599bae8618f36ef5b164526e0e82d313634ad8e",
     "src/pynq/tests/test_uart_session_stop.py": "be9675d9fcf63d67bb8de0b533074412441a2e568d57a362839c6dbb93fdb201",
     "src/pynq/tests/test_uart_viewer.py": "9d029c2d0f6b4d1499b4707431627af23778b57f2adf67cd7d6af2d8e79481c3",
-    "src/pynq/tests/test_urx2_power_acceptance.py": "cfef46d5c854f27cf465f4fb62b50f29d3a2273fb33823f98799d8905677a92f"
+    "src/pynq/tests/test_urx2_power_acceptance.py": "cfef46d5c854f27cf465f4fb62b50f29d3a2273fb33823f98799d8905677a92f",
+    "license.txt": "059ff830ccef9fec707b7bd23c8d648f1d19c11b132843c64d0e7fd7b5b5ae0e"
   }
 }

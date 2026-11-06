@@ -81,3 +81,7 @@ python src/car/tools/build.py --keil D:/Keil_32/UV4/UV4.exe
 - PYNQ 实现为 100 MHz，WNS=0.000 ns、WHS=0.044 ns；不声称额外时序裕量。
 
 具体结果见 [验证清单](report/repository_validation.json)、[数据索引](data/README.md) 和 [设计报告](report/uart_evidence_design_report.pdf)。
+
+## 许可证
+
+团队原创源码及其配套开发文档采用 MIT 许可证。第三方文件保留各自的版权声明及适用条款，包括 STMicroelectronics 和 Arm 库、启动代码及板卡厂商提供的定义和参考资料。[MIT 许可证全文](license.txt)
